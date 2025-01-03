@@ -1,0 +1,23 @@
+@extends('website.master')
+
+@section('title')
+    Contact-us
+@endsection
+
+@section('body')
+
+
+@endsection
+
+
+All changes :
+
+index.html            ------> {{route('home')}}
+contact.html          ------>  {{route('contact')}}
+about.html            ------>  {{route('about')}}
+shop.html             ------>  {{route('products')}}
+shop-details.html     ------>  {{route('product.details')}}
+assets                ------>  {{asset('/')}}website/assets/
+
+
+{{route('home')}}
