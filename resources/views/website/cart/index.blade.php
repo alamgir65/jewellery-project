@@ -1,7 +1,7 @@
 @extends('website.master')
 
 @section('title')
-    cart-page
+    add-to-cart-page
 @endsection
 
 @section('body')
@@ -146,7 +146,7 @@
                         </tr>
                         </tfoot>
                     </table>
-                    <div class="wc-proceed-to-checkout mb-30"><a href="checkout.html" class="vs-btn">Proceed
+                    <div class="wc-proceed-to-checkout mb-30"><a href="{{route('checkout')}}" class="vs-btn">Proceed
                             to checkout</a></div>
                 </div>
             </div>

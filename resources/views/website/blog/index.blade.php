@@ -1,7 +1,7 @@
 @extends('website.master')
 
 @section('title')
-    blog-details
+    blog
 @endsection
 
 @section('body')
@@ -13,11 +13,11 @@
         <img src="{{asset('/')}}website/assets/img/shapes/dot-shape.svg" alt="dot" class="breadcumb-element">
         <div class="container z-index-common">
             <div class="breadcumb-content">
-                <h1 class="breadcumb-title">blog details</h1>
+                <h1 class="breadcumb-title">our blog</h1>
                 <div class="breadcumb-menu-wrap">
                     <ul class="breadcumb-menu">
                         <li><a href="index.html">Home</a></li>
-                        <li>blog details</li>
+                        <li>our blog</li>
                     </ul>
                 </div>
             </div>
@@ -27,9 +27,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
-                    <div class="vs-blog blog-style1 blog-single">
+                    <div class="vs-blog blog-style1 wow animate__fadeInUp wow-animated">
                         <div class="blog-img">
-                            <a href="blog-details.html">
+                            <a href="{{route('blog-details')}}">
                                 <img class="img" src="{{asset('/')}}website/assets/img/blog/blog-big-1-1.jpg" alt="blog">
                             </a>
                         </div>
@@ -39,62 +39,22 @@
                                 <span>December 1, 2024</span>
                             </div>
                             <h3 class="blog-title">
-                                both of which translate
+                                <a href="{{route('blog-details')}}">
+                                    both of which translate
+                                </a>
                             </h3>
                             <p class="blog-text">
                                 Lorem ipsum dolor sit amet, conse elit, sedid that eiusmod aboret dolore magna aliqua conseel usndi
                                 labois sitamet sedid sedid eiusm or incididunt ut labore et dolore magna aliq. Uenim minim veniam,
                                 quis nostrud Duis aute irure dolor in reprehend.
                             </p>
-                            <p class="blog-text">
-                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                                born and I will give you a complete account of the system, and expound the actual teachings the
-                                greatsd explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or
-                                avoids pleasure its because it is pleasure, but because those who do not know how to pursue pleasure
-                            </p>
-                            <blockquote class="vs-quote">
-                                <i class="quote-icon"><img src="{{asset('/')}}website/assets/img/icons/svg-blog-details-quote-icon-1-1.svg"
-                                                           alt="quote icon"></i>
-                                <p>On the other hand, we denounce with righteous
-                                    men who are so beguiled</p>
-                            </blockquote>
-                            <p class="blog-text">
-                                Lorem ipsum dolor sit amet, conse elit, sedid that eiusmod aboret dolore magna aliqua conseel usndi
-                                labois sitamet sedid sedid eiusm or incididunt ut labore et dolore magna aliq. Uenim minim veniam,
-                                quis nostrud Duis aute irure dolor in reprehend.
-                            </p>
-                            <h2 class="blog-title">
-                                which translate
-                            </h2>
-                            <p class="blog-text">
-                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                                born and I will give you a complete account of the system, and expound the actual teachings the
-                                greatsd explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or
-                                avoids pleasure its because it is pleasure, but because those who do not know how to pursue pleasure
-                            </p>
-                            <div class="row pt-30">
-                                <div class="col-xl-6 col-md-auto mb-30">
-                                    <div class="blog-img rounded-15 overflow-hidden">
-                                        <img class="img w-100" src="{{asset('/')}}website/assets/img/blog/blog-d-1-1.jpg" alt="blog">
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-md-auto mb-30">
-                                    <div class="blog-img rounded-15 overflow-hidden">
-                                        <img class="img w-100" src="{{asset('/')}}website/assets/img/blog/blog-d-1-2.jpg" alt="blog">
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="blog-text">
-                                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                                born and I will give you a complete account of the system, and expound the actual teachings the
-                                greatsd explorer of the truth, the master-builder of human happiness. No one rejects.
-                            </p>
                             <div class="blog-footer">
-                                <div class="tagcloud">
-                                    <a href="blog-details.html">diamond</a>
-                                    <a href="blog-details.html">necklace</a>
-                                    <a href="blog-details.html">rings</a>
-                                </div>
+                                <a class="blog-link" href="{{route('blog-details')}}">
+                                    Read More
+                                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.707 6.04883L10.957 9.79883C10.6055 10.1797 9.99023 10.1797 9.63867 9.79883C9.25781 9.44727 9.25781 8.83203 9.63867 8.48047L11.7773 6.3125H0.9375C0.410156 6.3125 0 5.90234 0 5.375C0 4.81836 0.410156 4.4375 0.9375 4.4375H11.7773L9.63867 2.29883C9.25781 1.94727 9.25781 1.33203 9.63867 0.980469C9.99023 0.599609 10.6055 0.599609 10.957 0.980469L14.707 4.73047C15.0879 5.08203 15.0879 5.69727 14.707 6.04883Z" fill="#FF3E01" />
+                                    </svg>
+                                </a>
                                 <div class="blog-social">
                                     <a href="#">IG</a>
                                     <a href="#">FB</a>
@@ -104,107 +64,88 @@
                             <img src="{{asset('/')}}website/assets/img/shapes/dot-shape-2.svg" alt="dot" class="blog-element">
                         </div>
                     </div>
-                    <div class="post-admin">
-                        <div class="post-img">
-                            <img src="{{asset('/')}}website/assets/img/blog/blog-d-1-8.jpg" alt="">
+                    <div class="vs-blog blog-style1 wow animate__fadeInUp wow-animated">
+                        <div class="blog-img">
+                            <a href="{{route('blog-details')}}">
+                                <img class="img" src="{{asset('/')}}website/assets/img/blog/blog-big-1-2.jpg" alt="blog">
+                            </a>
                         </div>
-                        <div class="post-content">
-                            <div class="post-header">
-                                <h4>Amalia elha</h4>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog.html">Diamond</a>
+                                <span>December 1, 2024</span>
                             </div>
-                            <p class="post-text">But I must explain to you how all this mistaken idea of denoucing pleasure and
-                                praising pain was born and I will give.</p>
-                            <div class="blog-social">
-                                <a href="#">IG</a>
-                                <a href="#">FB</a>
-                                <a href="#">LI</a>
+                            <h3 class="blog-title">
+                                <a href="{{route('blog-details')}}">
+                                    piece hanging down
+                                </a>
+                            </h3>
+                            <p class="blog-text">
+                                Lorem ipsum dolor sit amet, conse elit, sedid that eiusmod aboret dolore magna aliqua conseel usndi
+                                labois sitamet sedid sedid eiusm or incididunt ut labore et dolore magna aliq. Uenim minim veniam,
+                                quis nostrud Duis aute irure dolor in reprehend.
+                            </p>
+                            <div class="blog-footer">
+                                <a class="blog-link" href="{{route('blog-details')}}">
+                                    Read More
+                                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.707 6.04883L10.957 9.79883C10.6055 10.1797 9.99023 10.1797 9.63867 9.79883C9.25781 9.44727 9.25781 8.83203 9.63867 8.48047L11.7773 6.3125H0.9375C0.410156 6.3125 0 5.90234 0 5.375C0 4.81836 0.410156 4.4375 0.9375 4.4375H11.7773L9.63867 2.29883C9.25781 1.94727 9.25781 1.33203 9.63867 0.980469C9.99023 0.599609 10.6055 0.599609 10.957 0.980469L14.707 4.73047C15.0879 5.08203 15.0879 5.69727 14.707 6.04883Z" fill="#FF3E01" />
+                                    </svg>
+                                </a>
+                                <div class="blog-social">
+                                    <a href="#">IG</a>
+                                    <a href="#">FB</a>
+                                    <a href="#">LI</a>
+                                </div>
                             </div>
+                            <img src="{{asset('/')}}website/assets/img/shapes/dot-shape-2.svg" alt="dot" class="blog-element">
                         </div>
                     </div>
-                    <div class="post-pagination">
-                        <div class="row justify-content-between align-items-center gy-4">
-                            <div class="col">
-                                <div class="post-pagi-box prev">
-                                    <div class="right">
-                                        <a class="post-pagi-control" href="single-project.html"><i class="far fa-long-arrow-left"></i>previous
-                                            post</a>
-                                    </div>
+                    <div class="vs-blog blog-style1 wow animate__fadeInUp wow-animated">
+                        <div class="blog-img">
+                            <a href="{{route('blog-details')}}">
+                                <img class="img" src="{{asset('/')}}website/assets/img/blog/blog-big-1-3.jpg" alt="blog">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog.html">Diamond</a>
+                                <span>December 1, 2024</span>
+                            </div>
+                            <h3 class="blog-title">
+                                <a href="{{route('blog-details')}}">
+                                    piece hanging down
+                                </a>
+                            </h3>
+                            <p class="blog-text">
+                                Lorem ipsum dolor sit amet, conse elit, sedid that eiusmod aboret dolore magna aliqua conseel usndi
+                                labois sitamet sedid sedid eiusm or incididunt ut labore et dolore magna aliq. Uenim minim veniam,
+                                quis nostrud Duis aute irure dolor in reprehend.
+                            </p>
+                            <div class="blog-footer">
+                                <a class="blog-link" href="{{route('blog-details')}}">
+                                    Read More
+                                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.707 6.04883L10.957 9.79883C10.6055 10.1797 9.99023 10.1797 9.63867 9.79883C9.25781 9.44727 9.25781 8.83203 9.63867 8.48047L11.7773 6.3125H0.9375C0.410156 6.3125 0 5.90234 0 5.375C0 4.81836 0.410156 4.4375 0.9375 4.4375H11.7773L9.63867 2.29883C9.25781 1.94727 9.25781 1.33203 9.63867 0.980469C9.99023 0.599609 10.6055 0.599609 10.957 0.980469L14.707 4.73047C15.0879 5.08203 15.0879 5.69727 14.707 6.04883Z" fill="#FF3E01" />
+                                    </svg>
+                                </a>
+                                <div class="blog-social">
+                                    <a href="#">IG</a>
+                                    <a href="#">FB</a>
+                                    <a href="#">LI</a>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="post-pagi-box next">
-                                    <div class="right">
-                                        <a class="post-pagi-control" href="single-project.html">next post<i
-                                                class="far fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="{{asset('/')}}website/assets/img/shapes/dot-shape-2.svg" alt="dot" class="blog-element">
                         </div>
                     </div>
-                    <div class="vs-comments-wrap">
-                        <h2 class="blog-inner-title">3 Comments</h2>
-                        <ul class="comment-list">
-                            <li class="vs-comment-item">
-                                <div class="vs-post-comment">
-                                    <div class="comment-avater">
-                                        <img src="{{asset('/')}}website/assets/img/blog/blog-d-1-9.jpg" alt="Comment Author">
-                                    </div>
-                                    <div class="comment-content">
-                                        <h4 class="name h4">janel grant <span class="commented-on"> December 1, 2024</span></h4>
-                                        <p class="text">But I must explain to you how all this mistaken ideashwad of denoucing pleasure
-                                            and praising pain was born and I will give.</p>
-                                        <a href="blog-details.html" class="replay-btn"><i class="fas fa-reply"></i>Replay</a>
-                                    </div>
-                                </div>
-                                <img class="comment-ele" src="{{asset('/')}}website/assets/img/shapes/dot-shape-4.svg" alt="dot shape">
-                                <ul class="children">
-                                    <li class="vs-comment-item">
-                                        <div class="vs-post-comment">
-                                            <div class="comment-avater">
-                                                <img src="{{asset('/')}}website/assets/img/blog/blog-d-1-10.jpg" alt="Comment Author">
-                                            </div>
-                                            <div class="comment-content">
-                                                <h4 class="name h4">arecika jonson<span class="commented-on"> December 1, 2024</span></h4>
-                                                <p class="text">But I must explain to you how all this mistaken ideashwad of denoucing
-                                                    pleasure
-                                                    and praising pain was born and I will give.</p>
-                                                <a href="blog-details.html" class="replay-btn"><i class="fas fa-reply"></i>Replay</a>
-                                            </div>
-                                        </div>
-                                        <img class="comment-ele" src="{{asset('/')}}website/assets/img/shapes/dot-shape-4.svg" alt="dot shape">
-                                    </li>
-                                </ul>
-                            </li>
+                    <div class="vs-pagination">
+                        <a href="#" class="pagi-btn"><i class="fa-solid fa-angles-left"></i></a>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">...</a></li>
                         </ul>
-                    </div>
-                    <div class="vs-comment-form">
-                        <div id="respond" class="comment-respond">
-                            <h2 class="blog-inner-title">Leave a Reply</h2>
-                            <p>Your email address will not be published. Required fields are marked *</p>
-                            <div class="form-inner">
-                                <div class="row gx-20">
-                                    <div class="col-12 form-group">
-                                        <textarea class="form-control" placeholder="your comments *"></textarea>
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <input type="text" class="form-control" placeholder="your name *">
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <input type="email" class="form-control" placeholder="your name *">
-                                    </div>
-                                    <div class="col-12 ">
-                                        <div class="custom-checkbox notice">
-                                            <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
-                                            <label for="wp-comment-cookies-consent"> Save my name, email, and
-                                                website in this browser for the next time I comment.</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 form-group mb-0">
-                                        <button class="vs-btn">Send Message<i class="far fa-arrow-right"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="#" class="pagi-btn"><i class="fa-solid fa-angles-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -220,28 +161,28 @@
                             </h3>
                             <ul>
                                 <li>
-                                    <a href="blog-details.html">
+                                    <a href="{{route('blog-details')}}">
                                         diamond pendant
                                     </a>
                                     <span>3</span>
                                     <img class="dot-shape" src="{{asset('/')}}website/assets/img/shapes/dot-shape-3.svg" alt="dot-shape">
                                 </li>
                                 <li>
-                                    <a href="blog-details.html">
+                                    <a href="{{route('blog-details')}}">
                                         necklace
                                     </a>
                                     <span>3</span>
                                     <img class="dot-shape" src="{{asset('/')}}website/assets/img/shapes/dot-shape-3.svg" alt="dot-shape">
                                 </li>
                                 <li>
-                                    <a href="blog-details.html">
+                                    <a href="{{route('blog-details')}}">
                                         woman ring
                                     </a>
                                     <span>3</span>
                                     <img class="dot-shape" src="{{asset('/')}}website/assets/img/shapes/dot-shape-3.svg" alt="dot-shape">
                                 </li>
                                 <li>
-                                    <a href="blog-details.html">
+                                    <a href="{{route('blog-details')}}">
                                         pendent
                                     </a>
                                     <span>3</span>
@@ -256,11 +197,11 @@
                             <div class="recent-post-wrap">
                                 <div class="recent-post">
                                     <div class="media-img">
-                                        <a href="blog-details.html"><img src="{{asset('/')}}website/assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a>
+                                        <a href="{{route('blog-details')}}"><img src="{{asset('/')}}website/assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a>
                                     </div>
                                     <div class="media-body">
                                         <h4 class="post-title">
-                                            <a class="text-inherit" href="blog-details.html">
+                                            <a class="text-inherit" href="{{route('blog-details')}}">
                                                 Struure Dial design
                                                 watch
                                             </a>
@@ -272,11 +213,11 @@
                                 </div>
                                 <div class="recent-post">
                                     <div class="media-img">
-                                        <a href="blog-details.html"><img src="{{asset('/')}}website/assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
+                                        <a href="{{route('blog-details')}}"><img src="{{asset('/')}}website/assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
                                     </div>
                                     <div class="media-body">
                                         <h4 class="post-title">
-                                            <a class="text-inherit" href="blog-details.html">
+                                            <a class="text-inherit" href="{{route('blog-details')}}">
                                                 piece old hanging
                                                 down
                                             </a>
@@ -288,11 +229,11 @@
                                 </div>
                                 <div class="recent-post">
                                     <div class="media-img">
-                                        <a href="blog-details.html"><img src="{{asset('/')}}website/assets/img/blog/recent-post-1-3.jpg" alt="Blog Image"></a>
+                                        <a href="{{route('blog-details')}}"><img src="{{asset('/')}}website/assets/img/blog/recent-post-1-3.jpg" alt="Blog Image"></a>
                                     </div>
                                     <div class="media-body">
                                         <h4 class="post-title">
-                                            <a class="text-inherit" href="blog-details.html">
+                                            <a class="text-inherit" href="{{route('blog-details')}}">
                                                 loose hanging piece
                                                 watch
                                             </a>
@@ -309,11 +250,11 @@
                                 Tags
                             </h3>
                             <div class="tagcloud">
-                                <a href="blog-details.html">diamond</a>
-                                <a href="blog-details.html">necklace</a>
-                                <a href="blog-details.html">rings</a>
-                                <a href="blog-details.html">wedding ring</a>
-                                <a href="blog-details.html">pendant</a>
+                                <a href="{{route('blog-details')}}">diamond</a>
+                                <a href="{{route('blog-details')}}">necklace</a>
+                                <a href="{{route('blog-details')}}">rings</a>
+                                <a href="{{route('blog-details')}}">wedding ring</a>
+                                <a href="{{route('blog-details')}}">pendant</a>
                             </div>
                         </div>
                         <div class="widget widget_tags wow animate__fadeInUp">

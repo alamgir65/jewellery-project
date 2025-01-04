@@ -15,4 +15,7 @@ class WebsiteController extends Controller
     public function about(){
         return view('website.home.about');
     }
+    public function faq(){
+        return view('website.home.faq');
+    }
 }

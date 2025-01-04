@@ -18,6 +18,7 @@ about.html            ------>  {{route('about')}}
 shop.html             ------>  {{route('products')}}
 shop-details.html     ------>  {{route('product.details')}}
 assets                ------>  {{asset('/')}}website/assets/
-
-
+blog.html             ------>  {{route('blog.index')}}
+blog-list.html        ------>  {{route('blog-list')}}
+blog-details.html     ------>  {{route('blog-details')}}
 {{route('home')}}

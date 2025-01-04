@@ -136,7 +136,7 @@ Hero Area
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
-              <a class="product-cart" href="cart.html">add to cart</a>
+              <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
               </span>
                         <div class="product-rate">
                             <i class="fa-solid fa-star"></i>
@@ -170,7 +170,7 @@ Hero Area
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
-              <a class="product-cart" href="cart.html">add to cart</a>
+              <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
               </span>
                         <div class="product-rate">
                             <i class="fa-solid fa-star"></i>
@@ -204,7 +204,7 @@ Hero Area
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
-              <a class="product-cart" href="cart.html">add to cart</a>
+              <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
               </span>
                         <div class="product-rate">
                             <i class="fa-solid fa-star"></i>
@@ -238,7 +238,7 @@ Hero Area
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
-              <a class="product-cart" href="cart.html">add to cart</a>
+              <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
               </span>
                         <div class="product-rate">
                             <i class="fa-solid fa-star"></i>
@@ -372,7 +372,7 @@ Hero Area
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$355.00</span>
-                  <a class="product-cart" href="cart.html">add to cart</a>
+                  <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
                   </span>
                             </div>
                         </div>
@@ -400,7 +400,7 @@ Hero Area
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$355.00</span>
-                  <a class="product-cart" href="cart.html">add to cart</a>
+                  <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
                   </span>
                             </div>
                         </div>
@@ -428,7 +428,7 @@ Hero Area
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$250.00</span>
-                  <a class="product-cart" href="cart.html">add to cart</a>
+                  <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
                   </span>
                             </div>
                         </div>
@@ -456,7 +456,7 @@ Hero Area
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$155.00</span>
-                  <a class="product-cart" href="cart.html">add to cart</a>
+                  <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
                   </span>
                             </div>
                         </div>
