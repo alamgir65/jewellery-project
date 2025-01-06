@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
-//use App\Http\Controllers\productController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
@@ -24,12 +25,9 @@ Route::get('/all-blog',[BlogController::class,'index'])->name('blog.index');
 Route::get('/blog/details',[BlogController::class,'blogDetails'])->name('blog-details');
 Route::get('/blog/list',[BlogController::class,'blogList'])->name('blog-list');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
+    Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
+
+    Route::get('/category/add',[CategoryController::class,'createCategory'])->name('category.create');
+    Route::get('/category/manage',[CategoryController::class,'index'])->name('category.index');
 });

@@ -16,7 +16,7 @@ For using jetstream :
 
 
 All changes :
-
+../../assets          ------> {{asset('/')}}admin/assets/
 index.html            ------> {{route('home')}}
 contact.html          ------>  {{route('contact')}}
 about.html            ------>  {{route('about')}}
