@@ -9,6 +9,11 @@
 
 @endsection
 
+-----------------
+For using jetstream :
+    composer require laravel/jetstream
+    php artisan jetstream:install livewire
+
 
 All changes :
 

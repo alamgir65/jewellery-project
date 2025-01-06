@@ -23,3 +23,13 @@ Route::get('/cart/checkout',[CartController::class,'checkout'])->name('checkout'
 Route::get('/all-blog',[BlogController::class,'index'])->name('blog.index');
 Route::get('/blog/details',[BlogController::class,'blogDetails'])->name('blog-details');
 Route::get('/blog/list',[BlogController::class,'blogList'])->name('blog-list');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
