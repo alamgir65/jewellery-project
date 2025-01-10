@@ -30,8 +30,12 @@
                             <img src="{{asset($brand->image)}}" alt="image" height="60">
                         </td>
                         <td>
-                            <a href="{{route('brand.edit',['id'=>$brand->id])}}" class="btn btn-info">Edit</a>
-                            <a href="{{route('brand.delete',['id'=>$brand->id])}}" class="btn btn-danger" onclick="confirm('Are you want to delete this brand?')">Delete</a>
+                            <a href="{{route('brand.edit',['id'=>$brand->id])}}" class="btn btn-info">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                            <a href="{{route('brand.delete',['id'=>$brand->id])}}" class="btn btn-danger" onclick="confirm('Are you want to delete this brand?')">
+                                <i class="fa fa-trash"></i>
+                            </a>
                         </td>
                     </tr>
                 @endforeach

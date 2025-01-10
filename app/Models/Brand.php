@@ -18,14 +18,17 @@ class Brand extends Model
     }
 //    Function for update Brand
     public static function updateBrand($request,$id){
+        self::$brand = Brand::find($id);
         if($request->file('image')){
+            if(file_exists(self::$brand->image)){
+                unlink(self::$brand->image);
+            }
             self::$imageUrl = self::getImageUrl($request);
         }
         else{
-            self::$imageUrl = $request->image;
+            self::$imageUrl = self::$brand->image;
         }
 
-        self::$brand = Brand::find($id);
         self::$brand->name = $request->name;
         self::$brand->status = $request->status;
         self::$brand->image = self::$imageUrl;
