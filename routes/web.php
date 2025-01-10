@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BrandController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
@@ -34,4 +35,11 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/category/edit/{id}',[CategoryController::class,'edit'])->name('category.edit');
     Route::post('/category/update/{id}',[CategoryController::class,'update'])->name('category.update');
     Route::get('/category/delete/{id}',[CategoryController::class,'delete'])->name('category.delete');
+
+    Route::get('/brand/add',[BrandController::class,'create'])->name('brand.create');
+    Route::get('/brand/manage',[BrandController::class,'index'])->name('brand.index');
+    Route::post('/brand/stores',[BrandController::class,'store'])->name('brand.store');
+    Route::get('/brand/edit/{id}',[BrandController::class,'edit'])->name('brand.edit');
+    Route::post('/brand/update/{id}',[BrandController::class,'update'])->name('brand.update');
+    Route::get('/brand/delete/{id}',[BrandController::class,'delete'])->name('brand.delete');
 });

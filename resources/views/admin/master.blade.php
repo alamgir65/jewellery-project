@@ -152,12 +152,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="app-ecommerce-dashboard.html" class="menu-link">
+                            <a href="{{route('brand.create')}}" class="menu-link">
                                 <div>Add Brand</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <a href="{{route('brand.index')}}" class="menu-link">
                                 <div>Manage Brand</div>
                             </a>
                         </li>
