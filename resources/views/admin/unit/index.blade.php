@@ -33,7 +33,7 @@
                                     <a href="{{route('unit.edit',['id'=>$unit->id])}}" class="btn btn-info">
                                         <i class="fa fa-edit"></i>
                                     </a>
-                                    <a href="{{route('unit.delete',['id'=>$unit->id])}}" onclick="confirm('Are you sure you want to delete this Unit?')" class="btn btn-danger">
+                                    <a href="{{route('unit.delete',['id'=>$unit->id])}}" onclick="return confirm('Are you sure you want to delete this Unit?')" class="btn btn-danger">
                                         <i class="fa fa-trash"></i>
                                     </a>
 

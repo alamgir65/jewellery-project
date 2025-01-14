@@ -175,12 +175,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="app-academy-dashboard.html" class="menu-link">
+                            <a href="{{route('unit.create')}}" class="menu-link">
                                 <div>Add Unit</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="app-academy-course.html" class="menu-link">
+                            <a href="{{route('unit.index')}}" class="menu-link">
                                 <div>Manage Unit</div>
                             </a>
                         </li>

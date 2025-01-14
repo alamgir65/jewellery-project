@@ -15,4 +15,17 @@ class Unit extends Model
         self::$unit->description = $request->description;
         self::$unit->save();
     }
+
+    public static function updateUnit($request,$id){
+        self::$unit = Unit::find($id);
+
+        self::$unit->name = $request->name;
+        self::$unit->code = $request->code;
+        self::$unit->status = $request->status;
+        self::$unit->description = $request->description;
+        self::$unit->save();
+    }
+    public static function deleteUnit($id){
+        Unit::find($id)->delete();
+    }
 }
