@@ -8,7 +8,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
-
+use App\Http\Controllers\SubCategoryController;
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
 Route::get('/about',[WebsiteController::class,'about'])->name('about');
@@ -42,4 +42,11 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/brand/edit/{id}',[BrandController::class,'edit'])->name('brand.edit');
     Route::post('/brand/update/{id}',[BrandController::class,'update'])->name('brand.update');
     Route::get('/brand/delete/{id}',[BrandController::class,'delete'])->name('brand.delete');
+
+    Route::get('/subcategory/index',[SubCategoryController::class,'index'])->name('subcategory.index');
+    Route::get('/subcategory/create',[SubCategoryController::class,'create'])->name('subcategory.create');
+    Route::post('/subcategory/store',[SubCategoryController::class,'store'])->name('subcategory.store');
+    Route::get('/subcategory/edit/{id}',[SubCategoryController::class,'edit'])->name('subcategory.edit');
+    Route::post('/subcategory/update/{id}',[SubCategoryController::class,'update'])->name('subcategory.update');
+    Route::get('/subcategory/delete/{id}',[SubCategoryController::class,'delete'])->name('subcategory.delete');
 });
