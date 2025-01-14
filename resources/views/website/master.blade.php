@@ -96,7 +96,7 @@
                     </ul>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="{{route('product.sidebar')}}">watch</a>
+                    <a href="{{route('shop.sidebar')}}">watch</a>
                 </li>
                 <li>
                     <a href="shop.html">jewellery</a>
@@ -110,7 +110,7 @@
                                 <li><a href="index-2.html">Home 2</a></li>
                                 <li><a href="index-3.html">Home 3</a></li>
                                 <li><a href="{{route('about')}}">About</a></li>
-                                <li><a href="{{route('product.sidebar')}}">watch</a></li>
+                                <li><a href="{{route('shop.sidebar')}}">watch</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Page List 2</a>
@@ -125,7 +125,7 @@
                         <li><a href="#">Page List 3</a>
                             <ul>
                                 <li><a href="shop.html">Shop</a></li>
-                                <li><a href="{{route('product.sidebar')}}">Shop Sidebar</a></li>
+                                <li><a href="{{route('shop.sidebar')}}">Shop Sidebar</a></li>
                                 <li><a href="shop-details.html">Shop Details</a></li>
                                 <li><a href="{{route('add-to-cart')}}">My Cart</a></li>
                                 <li><a href="checkout.html">Checkout</a></li>
@@ -255,7 +255,7 @@
                             </ul>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="{{route('product.sidebar')}}">watch</a>
+                            <a href="{{route('shop.sidebar')}}">watch</a>
                         </li>
                         <li>
                             <a href="shop.html">jewellery</a>
@@ -269,7 +269,7 @@
                                         <li><a href="index-2.html">Home 2</a></li>
                                         <li><a href="index-3.html">Home 3</a></li>
                                         <li><a href="{{route('about')}}">About</a></li>
-                                        <li><a href="{{route('product.sidebar')}}">watch</a></li>
+                                        <li><a href="{{route('shop.sidebar')}}">watch</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Page List 2</a>
@@ -284,7 +284,7 @@
                                 <li><a href="#">Page List 3</a>
                                     <ul>
                                         <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="{{route('product.sidebar')}}">Shop Sidebar</a></li>
+                                        <li><a href="{{route('shop.sidebar')}}">Shop Sidebar</a></li>
                                         <li><a href="shop-details.html">Shop Details</a></li>
                                         <li><a href="{{route('add-to-cart')}}">My Cart</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
@@ -427,7 +427,7 @@
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="{{route('product.sidebar')}}">watch</a>
+                                        <a href="{{route('shop.sidebar')}}">watch</a>
                                     </li>
                                     <li>
                                         <a href="shop.html">jewellery</a>
@@ -441,7 +441,7 @@
                                                     <li><a href="index-2.html">Home 2</a></li>
                                                     <li><a href="index-3.html">Home 3</a></li>
                                                     <li><a href="{{route('about')}}">About</a></li>
-                                                    <li><a href="{{route('product.sidebar')}}">watch</a></li>
+                                                    <li><a href="{{route('shop.sidebar')}}">watch</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">Page List 2</a>
@@ -456,7 +456,7 @@
                                             <li><a href="#">Page List 3</a>
                                                 <ul>
                                                     <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="{{route('product.sidebar')}}">Shop Sidebar</a></li>
+                                                    <li><a href="{{route('shop.sidebar')}}">Shop Sidebar</a></li>
                                                     <li><a href="shop-details.html">Shop Details</a></li>
                                                     <li><a href="{{route('add-to-cart')}}">My Cart</a></li>
                                                     <li><a href="checkout.html">Checkout</a></li>

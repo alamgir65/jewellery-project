@@ -10,15 +10,16 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\UnitController;
+use App\Http\Controllers\ShopController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
 Route::get('/about',[WebsiteController::class,'about'])->name('about');
 Route::get('/faq',[WebsiteController::class,'faq'])->name('faq');
 
-Route::get('/products',[ProductController::class,'index'])->name('products');
-Route::get('/products/detail',[ProductController::class,'detail'])->name('product.details');
-Route::get('/product/sidebar',[ProductController::class,'productSideBar'])->name('product.sidebar');
+Route::get('/shop',[ShopController::class,'index'])->name('shop.index');
+Route::get('/shop/detail',[ShopController::class,'detail'])->name('shop.details');
+Route::get('/shop/sidebar',[ShopController::class,'productSideBar'])->name('shop.sidebar');
 
 
 Route::get('/products/add-to-cart',[CartController::class,'index'])->name('add-to-cart');
@@ -58,4 +59,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/unit/edit/{id}',[UnitController::class,'edit'])->name('unit.edit');
     Route::post('/unit/update/{id}',[UnitController::class,'update'])->name('unit.update');
     Route::get('/unit/delete/{id}',[UnitController::class,'delete'])->name('unit.delete');
+
+    Route::get('/product/index',[ProductController::class,'index'])->name('product.index');
+    Route::get('/product/create',[ProductController::class,'create'])->name('product.create');
+    Route::get('/get-subcategory-by-category',[ProductController::class,'getSubCategoryBYCategory'])->name('get-subcategory-by-category');
+    Route::post('/product/store',[ProductController::class,'store'])->name('product.store');
 });

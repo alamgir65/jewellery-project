@@ -36,7 +36,6 @@
                                     <a href="{{route('unit.delete',['id'=>$unit->id])}}" onclick="return confirm('Are you sure you want to delete this Unit?')" class="btn btn-danger">
                                         <i class="fa fa-trash"></i>
                                     </a>
-
                                 </td>
                             </tr>
                         @endforeach

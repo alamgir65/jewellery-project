@@ -51,6 +51,8 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{asset('/')}}admin/assets/js/config.js"></script>
 
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -194,12 +196,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="app-logistics-dashboard.html" class="menu-link">
+                            <a href="{{route('product.create')}}" class="menu-link">
                                 <div>Add Product</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="app-logistics-fleet.html" class="menu-link">
+                            <a href="{{route('product.index')}}" class="menu-link">
                                 <div>Manage Product</div>
                             </a>
                         </li>
@@ -808,7 +810,35 @@
 
 <!-- Page JS -->
 <script src="{{asset('/')}}admin/assets/js/dashboards-analytics.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            height: 350
+        });
+    });
+</script>
+<script>
+    function getSubcategoryByCategory($categoryId) {
+        $.ajax({
+            type: "GET",
+            url: "{{route('get-subcategory-by-category')}}",
+            data: {'id':$categoryId},
+            DataType: "JSON",
+            success: function (response) {
+                console.log(response);
 
+                var option = '';
+                option += '<option value="" >--Select Category--</option>';
+                $.each(response,function (key,value) {
+                    option += '<option value="'+value.id+'">'+value.name+'</option>';
+                })
+                $('#subCategory').empty();
+                $('#subCategory').append(option);
+            }
+        });
+    }
+</script>
 </body>
 
 </html>

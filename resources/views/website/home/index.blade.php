@@ -32,11 +32,11 @@ Hero Area
                                             </h1>
                                             <span class="hero-subtitle">
                       <span class=" htext3">
-                        HOLY JEWELRY and diamonds <a href="{{route('products')}}">pendants</a>
+                        HOLY JEWELRY and diamonds <a href="{{route('shop.index')}}">pendants</a>
                       </span>
                         </span>
                                             <div class="d-flex overflow-hidden hbtn1">
-                                                <a href="{{route('products')}}" class="vs-btn">Shop
+                                                <a href="{{route('shop.index')}}" class="vs-btn">Shop
                                                     Now</a>
                                             </div>
                                         </div>
@@ -62,11 +62,11 @@ Hero Area
                                             </h1>
                                             <span class="hero-subtitle">
                       <span class=" htext3">
-                        HOLY JEWELRY and diamonds <a href="{{route('products')}}">pendants</a>
+                        HOLY JEWELRY and diamonds <a href="{{route('shop.index')}}">pendants</a>
                       </span>
                         </span>
                                             <div class="d-flex overflow-hidden hbtn1">
-                                                <a href="{{route('products')}}" class="vs-btn">Shop
+                                                <a href="{{route('shop.index')}}" class="vs-btn">Shop
                                                     Now</a>
                                             </div>
                                         </div>
@@ -132,7 +132,7 @@ Hero Area
                             </div>
                         </div>
                         <h3 class="product-title">
-                            <a href="{{route('products')}}">Flower Pendant</a>
+                            <a href="{{route('shop.index')}}">Flower Pendant</a>
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
@@ -166,7 +166,7 @@ Hero Area
                             </div>
                         </div>
                         <h3 class="product-title">
-                            <a href="{{route('products')}}">Diamond Gold</a>
+                            <a href="{{route('shop.index')}}">Diamond Gold</a>
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
@@ -200,7 +200,7 @@ Hero Area
                             </div>
                         </div>
                         <h3 class="product-title">
-                            <a href="{{route('products')}}">Black Pendant</a>
+                            <a href="{{route('shop.index')}}">Black Pendant</a>
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
@@ -234,7 +234,7 @@ Hero Area
                             </div>
                         </div>
                         <h3 class="product-title">
-                            <a href="{{route('products')}}">wedding ring</a>
+                            <a href="{{route('shop.index')}}">wedding ring</a>
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
@@ -283,7 +283,7 @@ Hero Area
                                         <img src="{{asset('/')}}website/assets/img/categories/cate-1-1.jpg" alt="categories">
                                     </div>
                                     <h3 class="cate-title">
-                                        <a href="{{route('products')}}">wedding ring</a>
+                                        <a href="{{route('shop.index')}}">wedding ring</a>
                                     </h3>
                                     <span class="cate-stock">20 product</span>
                                 </div>
@@ -294,7 +294,7 @@ Hero Area
                                         <img src="{{asset('/')}}website/assets/img/categories/cate-1-2.jpg" alt="categories">
                                     </div>
                                     <h3 class="cate-title">
-                                        <a href="{{route('products')}}">Diamond Pendant</a>
+                                        <a href="{{route('shop.index')}}">Diamond Pendant</a>
                                     </h3>
                                     <span class="cate-stock">15 product</span>
                                 </div>
@@ -305,7 +305,7 @@ Hero Area
                                         <img src="{{asset('/')}}website/assets/img/categories/cate-1-3.jpg" alt="categories">
                                     </div>
                                     <h3 class="cate-title">
-                                        <a href="{{route('products')}}">Woman Earring</a>
+                                        <a href="{{route('shop.index')}}">Woman Earring</a>
                                     </h3>
                                     <span class="cate-stock">10 product</span>
                                 </div>
@@ -368,7 +368,7 @@ Hero Area
                                     <img class="img" src="{{asset('/')}}website/assets/img/products2/product-1-1.png" alt="product">
                                 </div>
                                 <h3 class="product-title">
-                                    <a href="{{route('products')}}">Flower Pendant</a>
+                                    <a href="{{route('shop.index')}}">Flower Pendant</a>
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$355.00</span>
@@ -396,7 +396,7 @@ Hero Area
                                     <img class="img" src="{{asset('/')}}website/assets/img/products2/product-1-2.png" alt="product">
                                 </div>
                                 <h3 class="product-title">
-                                    <a href="{{route('products')}}">wedding ring</a>
+                                    <a href="{{route('shop.index')}}">wedding ring</a>
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$355.00</span>
@@ -424,7 +424,7 @@ Hero Area
                                     <img class="img" src="{{asset('/')}}website/assets/img/products2/product-1-3.png" alt="product">
                                 </div>
                                 <h3 class="product-title">
-                                    <a href="{{route('products')}}">Multi Stone Set</a>
+                                    <a href="{{route('shop.index')}}">Multi Stone Set</a>
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$250.00</span>
@@ -452,7 +452,7 @@ Hero Area
                                     <img class="img" src="{{asset('/')}}website/assets/img/products2/product-1-4.png" alt="product">
                                 </div>
                                 <h3 class="product-title">
-                                    <a href="{{route('products')}}">Designer Chain</a>
+                                    <a href="{{route('shop.index')}}">Designer Chain</a>
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$155.00</span>
@@ -538,11 +538,11 @@ Hero Area
                         <div class="offer-body">
                             <span class="offer-subtitle">save up to 40% off</span>
                             <h3 class="offer-title">
-                                <a href="{{route('products')}}">
+                                <a href="{{route('shop.index')}}">
                                     custom wedding Rings
                                 </a>
                             </h3>
-                            <a href="{{route('products')}}" class="vs-btn">order now</a>
+                            <a href="{{route('shop.index')}}" class="vs-btn">order now</a>
                         </div>
                     </div>
                 </div>
@@ -554,11 +554,11 @@ Hero Area
                         <div class="offer-body">
                             <span class="offer-subtitle">save up to 60% off</span>
                             <h3 class="offer-title">
-                                <a href="{{route('products')}}">
+                                <a href="{{route('shop.index')}}">
                                     custom party Rings
                                 </a>
                             </h3>
-                            <a href="{{route('products')}}" class="vs-btn">order now</a>
+                            <a href="{{route('shop.index')}}" class="vs-btn">order now</a>
                         </div>
                     </div>
                 </div>
@@ -664,7 +664,7 @@ Hero Area
                         <img src="{{asset('/')}}website/assets/img/quote/quote-vec-1-1.svg" alt="quote vector" class="quote-icon">
                         <h2 class="quote-title">get free quote</h2>
                         <div class="quote-btns">
-                            <a href="{{route('products')}}" class="vs-btn style2">shop now</a>
+                            <a href="{{route('shop.index')}}" class="vs-btn style2">shop now</a>
                             <a class="vs-btn style3" href="tel:+88017673989722">
                                 <i><img src="{{asset('/')}}website/assets/img/icons/vs-icon-headphone-1.svg" alt="vs-icon"></i>
                                 make a call
