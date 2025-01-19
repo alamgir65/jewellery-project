@@ -386,24 +386,11 @@
                                         </svg>
                                     </button>
                                     <ul class="menu-list">
+                                        @foreach($categories as $category)
                                         <li class="menu-item">
-                                            <span class="icon">👗</span> Fashion
+                                            <span class="icon"><img src="{{asset($category->image)}}" width="40" alt="logo"></span> {{$category->name}}
                                         </li>
-                                        <li class="menu-item">
-                                            <span class="icon">⌚</span> Watch
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="icon">💎</span> Earrings
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="icon">📿</span> Necklace
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="icon">🌸</span> Accessories
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="icon">💍</span> Rings
-                                        </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
