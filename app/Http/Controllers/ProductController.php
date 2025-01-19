@@ -28,10 +28,29 @@ class ProductController extends Controller
         OtherImage::newOtherImage($id,$request->file('other_image'));
         return back()->with('message','Product added successfully');
     }
+    public function edit($id){
+        return view('admin.product.edit',[
+            'product'=>Product::find($id),
+            'categories'=>Category::all(),
+            'subCategories'=>SubCategory::all(),
+            'brands'=>Brand::all(),
+            'units'=>Unit::all()
+            ]);
+    }
+    public function update(Request $request,$id){
+        Product::updateProduct($request,$id);
+        if($request->file('other_image')){
+            OtherImage::updateOtherImage($id,$request->file('other_image'));
+        }
+        return redirect('/product/index')->with('Product updated successfully');
+    }
+    public function delete($id){
+        Product::deleteProduct($id);
+        OtherImage::deleteOtherImage($id);
+        return back()->with('Product deleted successfully');
+    }
     public function details($id){
-        $product = Product::find($id);
-        $images = OtherImage::find($id);
-        return view('admin.product.details',['product'=>$product,'images'=>$images]);
+        return view('admin.product.details',['product'=>Product::find($id)]);
     }
     public function getSubCategoryBYCategory(){
         $categoryId = $_GET['id'];

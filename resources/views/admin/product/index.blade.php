@@ -33,10 +33,10 @@
                             <a href="{{route('product.details',['id'=>$product->id])}}" class="btn btn-primary">
                                 Details
                             </a>
-                            <a href="" class="btn btn-info">
+                            <a href="{{route('product.edit',['id'=>$product->id])}}" class="btn btn-info">
                                 <i class="fa fa-edit"></i>
                             </a>
-                            <a href="" class="btn btn-danger">
+                            <a href="{{route('product.delete',['id'=>$product->id])}}" onclick="return confirm('Do you want to delete this Product?')" class="btn btn-danger">
                                 <i class="fa fa-trash"></i>
                             </a>
                         </td>

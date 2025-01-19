@@ -65,4 +65,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/get-subcategory-by-category',[ProductController::class,'getSubCategoryBYCategory'])->name('get-subcategory-by-category');
     Route::post('/product/store',[ProductController::class,'store'])->name('product.store');
     Route::get('/product/details/{id}',[ProductController::class,'details'])->name('product.details');
+    Route::get('/product/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
+    Route::post('/product/update/{id}',[ProductController::class,'update'])->name('product.update');
+    Route::get('/product/delete/{id}',[ProductController::class,'delete'])->name('product.delete');
 });

@@ -16,7 +16,7 @@
                 <tr>
                     <th>Product Image</th>
                     <td>
-                        <img src="{{asset($product->image)}}" alt="img">
+                        <img src="{{asset($product->image)}}" height="100" alt="img">
                     </td>
                 </tr>
                 <tr>
@@ -34,47 +34,51 @@
 
                 <tr>
                     <th>Category</th>
-                    <td>{{$product->name}}</td>
+                    <td>{{$product->category->name}}</td>
                 </tr>
                 <tr>
                     <th>Sub-category</th>
-                    <td>{{$product->name}}</td>
+                    <td>{{$product->subCategory->name}}</td>
                 </tr>
                 <tr>
                     <th>Brand</th>
-                    <td>{{$product->name}}</td>
+                    <td>{{$product->brand->name}}</td>
                 </tr>
                 <tr>
                     <th>Unit</th>
-                    <td>{{$product->name}}</td>
+                    <td>{{$product->unit->name}}</td>
                 </tr>
                 <tr>
                     <th>Short Description</th>
-                    <td>{{$product->name}}</td>
+                    <td>{{$product->short_description}}</td>
                 </tr>
                 <tr>
                     <th>Long Description</th>
-                    <td>{{$product->name}}</td>
+                    <td>{!! $product->long_description !!}</td>
                 </tr>
                 <tr>
                     <th>Stock Amount</th>
-                    <td>{{$product->name}}</td>
+                    <td>{{$product->stock}}</td>
                 </tr>
                 <tr>
                     <th>Publication Status</th>
-                    <td>{{$product->name}}</td>
+                    <td>{{$product->status==1?'Published':'Unpublished'}}</td>
                 </tr>
                 <tr>
                     <th>Other's Images</th>
-                    <td>Hello</td>
+                    <td>
+                        @foreach($product->otherImage as $image)
+                            <img src="{{asset($image->image)}}" height="100" alt="img">
+                        @endforeach
+                    </td>
                 </tr>
                 <tr>
                     <th>Meta Title</th>
-                    <td>Hello</td>
+                    <td>{{$product->meta_title}}</td>
                 </tr>
                 <tr>
                     <th>Meta Description</th>
-                    <td>Hello</td>
+                    <td>{{$product->meta_description}}</td>
                 </tr>
             </table>
         </div>
