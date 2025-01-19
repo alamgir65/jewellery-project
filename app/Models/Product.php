@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     public static $image,$imageName,$imageUrl,$directory,$product;
-    public static function newCategory($request){
+    public static function newProduct($request){
         self::$product = new Product();
 
         self::$product->category_id         = $request->category_id;

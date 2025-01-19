@@ -102,7 +102,7 @@
                     <div class="row mb-4">
                         <label class="col-sm-2 col-form-label">Other's Image</label>
                         <div class="col-sm-10">
-                            <input type="file" class="form-control" multiple name="other_image">
+                            <input type="file" class="form-control" multiple name="other_image[]">
                         </div>
                     </div>
                     <div class="row mb-4">
@@ -120,7 +120,7 @@
                     <div class="row mb-4">
                         <label class="col-sm-2 col-form-label">Meta Title</label>
                         <div class="col-sm-10">
-                            <input type="number" name="meta_title" class="form-control" placeholder="Meta title">
+                            <input type="text" name="meta_title" class="form-control" placeholder="Meta title">
                         </div>
                     </div>
                     <div class="row mb-4">

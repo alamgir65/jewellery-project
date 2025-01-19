@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
-        return view('admin.product.index');
+        return view('admin.product.index',['products'=>Product::all()]);
     }
     public function create(){
         return view('admin.product.create',[
@@ -24,9 +24,14 @@ class ProductController extends Controller
         ]);
     }
     public function store(Request $request){
-        $id = Product::newCategory($request);
+        $id = Product::newProduct($request);
         OtherImage::newOtherImage($id,$request->file('other_image'));
         return back()->with('message','Product added successfully');
+    }
+    public function details($id){
+        $product = Product::find($id);
+        $images = OtherImage::find($id);
+        return view('admin.product.details',['product'=>$product,'images'=>$images]);
     }
     public function getSubCategoryBYCategory(){
         $categoryId = $_GET['id'];
