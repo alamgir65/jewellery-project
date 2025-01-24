@@ -18,11 +18,14 @@ Route::get('/about',[WebsiteController::class,'about'])->name('about');
 Route::get('/faq',[WebsiteController::class,'faq'])->name('faq');
 
 Route::get('/shop',[ShopController::class,'index'])->name('shop.index');
-Route::get('/shop/detail',[ShopController::class,'detail'])->name('shop.details');
+Route::get('/shop/detail/{id}',[ShopController::class,'detail'])->name('shop.details');
 Route::get('/shop/sidebar',[ShopController::class,'productSideBar'])->name('shop.sidebar');
+Route::get('/shop-product/by-category/{id}',[ShopController::class,'productByCategory'])->name('shop.product-by-category');
 
-
-Route::get('/products/add-to-cart',[CartController::class,'index'])->name('add-to-cart');
+Route::get('/cart/index',[CartController::class,'index'])->name('cart.index');
+Route::post('/cart/add/{id}',[CartController::class,'addToCart'])->name('add-to-cart');
+Route::post('/cart/update',[CartController::class,'update'])->name('cart.update');
+Route::get('/cart/remove/{rowId}',[CartController::class,'remove'])->name('cart.remove');
 Route::get('/cart/checkout',[CartController::class,'checkout'])->name('checkout');
 
 Route::get('/all-blog',[BlogController::class,'index'])->name('blog.index');

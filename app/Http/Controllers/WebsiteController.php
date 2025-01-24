@@ -15,12 +15,12 @@ class WebsiteController extends Controller
         ]);
     }
     public function contact(){
-        return view('website.home.contact');
+        return view('website.home.contact',['categories'=>Category::all()]);
     }
     public function about(){
-        return view('website.home.about');
+        return view('website.home.about',['categories'=>Category::all()]);
     }
     public function faq(){
-        return view('website.home.faq');
+        return view('website.home.faq',['categories'=>Category::all()]);
     }
 }

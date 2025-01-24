@@ -3,6 +3,15 @@
 @section('title')
     Product details
 @endsection
+@section('categories')
+    @foreach($categories as $category)
+        <a href="{{route('shop.product-by-category',['id'=>$category->id])}}">
+            <li class="menu-item">
+                <span class="icon"><img src="{{asset($category->image)}}" width="40" alt="logo"></span> {{$category->name}}
+            </li>
+        </a>
+    @endforeach
+@endsection
 
 @section('body')
 
@@ -27,79 +36,69 @@
     <div class="vs-product-wrapper space-top space-extra-bottom z-index-common">
         <div class="extra-shape"></div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-7 mb-30">
-                    <div class="product-slide-row">
-                        <div class="product-thumb-slide vs-carousel" data-slide-show="4" data-md-slide-show="4" data-sm-slide-show="3" data-xs-slide-show="3" data-asnavfor=".product-big-img" data-vertical="true" data-sm-vertical="false" data-xs-vertical="false">
-                            <div>
-                                <div class="thumb"><img src="{{asset('/')}}website/assets/img/shop/shop-d-small-1-1.png" alt="Product Image"></div>
+            <form action="{{route('add-to-cart',['id'=>$product->id])}}" method="post">
+                @csrf
+                <div class="row">
+                    <div class="col-lg-7 mb-30">
+                        <div class="product-slide-row">
+                            <div class="product-thumb-slide vs-carousel" data-slide-show="4" data-md-slide-show="4" data-sm-slide-show="3" data-xs-slide-show="3" data-asnavfor=".product-big-img" data-vertical="true" data-sm-vertical="false" data-xs-vertical="false">
+                                @foreach($product->otherImage as $image)
+                                    <div>
+                                        <div class="thumb"><img src="{{asset($image->image)}}" alt="Product Image"></div>
+                                    </div>
+                                @endforeach
                             </div>
-                            <div>
-                                <div class="thumb"><img src="{{asset('/')}}website/assets/img/shop/shop-d-small-1-2.png" alt="Product Image"></div>
+                            <div class="product-big-img vs-carousel"  data-slide-show="1" data-fade="true" data-asnavfor=".product-thumb-slide">
+                                @foreach($product->otherImage as $image)
+                                    <div class="img"><img width="500px" src="{{asset($image->image)}}" alt="Product Image"></div>
+                                @endforeach
                             </div>
-                            <div>
-                                <div class="thumb"><img src="{{asset('/')}}website/assets/img/shop/shop-d-small-1-3.png" alt="Product Image"></div>
-                            </div>
-                            <div>
-                                <div class="thumb"><img src="{{asset('/')}}website/assets/img/shop/shop-d-small-1-4.png" alt="Product Image"></div>
-                            </div>
-                            <div>
-                                <div class="thumb"><img src="{{asset('/')}}website/assets/img/shop/shop-d-small-1-5.png" alt="Product Image"></div>
-                            </div>
-                        </div>
-                        <div class="product-big-img vs-carousel" data-slide-show="1" data-fade="true" data-asnavfor=".product-thumb-slide">
-                            <div class="img"><img src="{{asset('/')}}website/assets/img/shop/shop-d-big-1-1.png" alt="Product Image"></div>
-                            <div class="img"><img src="{{asset('/')}}website/assets/img/shop/shop-d-big-1-2.png" alt="Product Image"></div>
-                            <div class="img"><img src="{{asset('/')}}website/assets/img/shop/shop-d-big-1-3.png" alt="Product Image"></div>
-                            <div class="img"><img src="{{asset('/')}}website/assets/img/shop/shop-d-big-1-4.png" alt="Product Image"></div>
-                            <div class="img"><img src="{{asset('/')}}website/assets/img/shop/shop-d-big-1-5.png" alt="Product Image"></div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5 mb-30">
-                    <div class="product-about">
-                        <div class="product-rating">
-                            <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                                <span></span>
+                    <div class="col-lg-5 mb-30">
+                        <div class="product-about">
+                            <div class="product-rating">
+                                <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                                    <span></span>
+                                </div>
+                                <span class="product-rating__total">3 review</span>
                             </div>
-                            <span class="product-rating__total">3 review</span>
-                        </div>
-                        <h2 class="product-title">dound Dial watch</h2>
-                        <p class="product-price">$1250.00 <span>in stock</span></p>
-                        <p class="product-desc">Lorem ipsum dolor sit amet, conse elit, sedid that was eiusmod
-                            aboret dolore magna aliqua conseel usndi daimond the laois
-                            sitamet sedid sedid eiusm.</p>
-                        <div class="product-swatches-container">
-                            <div class="swatch swatch1 active"></div>
-                            <div class="swatch swatch2"></div>
-                            <div class="swatch swatch3"></div>
-                        </div>
-                        <div class="actions">
-                            <div class="quantity">
-                                <div class="quantity__field quantity-container">
-                                    <input type="number" id="quantity" class="qty-input" step="1" min="1" max="100" name="quantity" value="01" title="Qty">
-                                    <div class="quantity__buttons">
-                                        <button class="quantity-plus qty-btn"><i class="fa-solid fa-angle-up"></i></button>
-                                        <button class="quantity-minus qty-btn"><i class="fa-solid fa-angle-down"></i></button>
+                            <h2 class="product-title">dound Dial watch</h2>
+                            <p class="product-price">$1250.00 <span>in stock</span></p>
+                            <p class="product-desc">Lorem ipsum dolor sit amet, conse elit, sedid that was eiusmod
+                                aboret dolore magna aliqua conseel usndi daimond the laois
+                                sitamet sedid sedid eiusm.</p>
+                            <div class="product-swatches-container">
+                                <div class="swatch swatch1 active"></div>
+                                <div class="swatch swatch2"></div>
+                                <div class="swatch swatch3"></div>
+                            </div>
+                            <div class="actions">
+                                <div class="quantity">
+                                    <div class="quantity__field quantity-container">
+                                        <input type="number" id="quantity" name="qty" class="qty-input" step="1" min="1" max="100" name="quantity" value="01" title="Qty">
+                                        <div class="quantity__buttons">
+                                            <button class="quantity-plus qty-btn"><i class="fa-solid fa-angle-up"></i></button>
+                                            <button class="quantity-minus qty-btn"><i class="fa-solid fa-angle-down"></i></button>
+                                        </div>
                                     </div>
                                 </div>
+                                <button type="submit" class="vs-btn">Add to Cart</button>
                             </div>
-                            <a href="{{route('add-to-cart')}}" class="vs-btn">Add to Cart</a>
-                        </div>
-                        <a class="wish-btn" href="#"><i class="fa-light fa-heart"></i>add to Wishlist</a>
-                        <hr class="product-divider">
-                        <div class="product_meta">
+                            <a class="wish-btn" href="#"><i class="fa-light fa-heart"></i>add to Wishlist</a>
+                            <hr class="product-divider">
+                            <div class="product_meta">
                 <span>Category :
               <span>
                 <a href="#" rel="tag">round,</a><a href="#" rel="tag">dial,</a><a href="#">class</a>
               </span>
                 </span>
-                            <span>Tags :
+                                <span>Tags :
               <span>
                 <a href="#" rel="tag">silver,</a><a href="#" rel="tag">pink,</a><a href="#" rel="tag">green</a>
               </span>
                 </span>
-                            <span>share :
+                                <span>share :
               <span class="social">
                 <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
                 <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
@@ -107,10 +106,11 @@
                 <a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
               </span>
                 </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <!-- Products Area End -->

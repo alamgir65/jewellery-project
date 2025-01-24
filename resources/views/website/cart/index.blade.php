@@ -29,7 +29,8 @@
             <div class="woocommerce-notices-wrapper">
                 <div class="woocommerce-message">Shipping costs updated.</div>
             </div>
-            <form action="#" class="woocommerce-cart-form">
+            <form action="{{route('cart.update')}}" method="post" class="woocommerce-cart-form">
+                @csrf
                 <table class="cart_table">
                     <thead>
                     <tr>
@@ -42,34 +43,39 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @php($sum=0)
+                    @foreach(Cart::content() as $key => $cart_product)
                     <tr class="cart_item">
                         <td data-title="Product">
                             <a class="cart-productimage" href="shop.html">
-                                <img width="100" height="95" src="{{asset('/')}}website/assets/img/shop/product-1-1.png" alt="Image">
+                                <img width="100" height="95" src="{{asset($cart_product->options->image)}}" alt="Image">
                             </a>
                         </td>
                         <td data-title="Name">
-                            <a class="cart-productname" href="shop.html">BMW Car Lexus GS
-                                Steering...
+                            <a class="cart-productname" href="shop.html">
+                                {{$cart_product->name}}
                             </a>
                         </td>
-                        <td data-title="Price"><span class="amount"><bdi><span>$</span>200.00</bdi></span></td>
+                        <td data-title="Price"><span class="amount"><bdi><span>$</span>{{$cart_product->price}}</bdi></span></td>
                         <td data-title="Quantity">
                             <div class="quantity style2">
                                 <div class="quantity__field quantity-container">
                                     <button class="quantity-minus qty-btn">
                                         <i class="fal fa-minus"></i>
                                     </button>
-                                    <input type="number" id="quantity" class="qty-input" step="1" min="1" max="100" name="quantity" value="01" title="Qty">
+                                    <input type="hidden" name="qty[{{$key}}][rowId]" value="{{$cart_product->rowId}}">
+                                    <input type="number" id="quantity" class="qty-input" step="1" min="1" max="100" name="qty[{{$key}}][qty]" value="{{$cart_product->qty}}" title="Qty">
                                     <button class="quantity-plus qty-btn">
                                         <i class="fal fa-plus"></i>
                                     </button>
                                 </div>
                             </div>
                         </td>
-                        <td data-title="Total"><span class="amount"><bdi><span>$</span>200.00</bdi></span></td>
-                        <td data-title="Remove"><a href="#" class="remove"><i class="fal fa-trash-alt"></i></a></td>
+                        <td data-title="Total"><span class="amount"><bdi><span>$</span>{{ $total = ($cart_product->qty * $cart_product->price)}}</bdi></span></td>
+                        @php($sum +=($cart_product->qty * $cart_product->price))
+                        <td data-title="Remove"><a href="{{route('cart.remove',['rowId'=>$cart_product->rowId])}}" class="remove"><i class="fal fa-trash-alt"></i></a></td>
                     </tr>
+                    @endforeach
                     <tr>
                         <td colspan="6" class="cart-actions">
                             <div class="row justify-content-between">
@@ -88,6 +94,7 @@
                             </div>
                         </td>
                     </tr>
+
                     </tbody>
                 </table>
             </form>
@@ -98,8 +105,14 @@
                         <tbody>
                         <tr>
                             <td>Cart Subtotal</td>
-                            <td data-title="Cart Subtotal"><span class="amount"><bdi><span>$</span>600.00</bdi></span>
+                            <td data-title="Cart Subtotal"><span class="amount"><bdi><span>BDT &nbsp;</span> {{number_format($sum)}}</bdi></span>
                             </td>
+                        </tr>
+                        <tr>
+                            <td>Tax (15%)</td>
+                            <td data-title="Cart Subtotal"><span class="amount"><bdi><span>BDT &nbsp;  </span> {{ $tax = ($sum * 0.15)}}</bdi></span>
+                            </td>
+                            @php($sum += $tax)
                         </tr>
                         <tr class="shipping">
                             <th>Shipping and Handling</th>
@@ -142,7 +155,7 @@
                         <tfoot>
                         <tr class="order-total">
                             <td>Order Total</td>
-                            <td data-title="Total"><strong><span class="amount"><bdi><span>$</span>600.00</bdi></span></strong></td>
+                            <td data-title="Total"><strong><span class="amount"><bdi><span>BDT &nbsp;</span>{{number_format($sum)}}</bdi></span></strong></td>
                         </tr>
                         </tfoot>
                     </table>

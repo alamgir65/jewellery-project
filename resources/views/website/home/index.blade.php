@@ -4,6 +4,16 @@
     Home
 @endsection
 
+@section('categories')
+    @foreach($categories as $category)
+        <a href="{{route('shop.product-by-category',['id'=>$category->id])}}">
+            <li class="menu-item">
+                <span class="icon"><img src="{{asset($category->image)}}" width="40" alt="logo"></span> {{$category->name}}
+            </li>
+        </a>
+    @endforeach
+@endsection
+
 
 @section('body')
     <!--==============================
@@ -136,7 +146,7 @@ Hero Area
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
-              <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
+              <a class="product-cart" href="">add to cart</a>
               </span>
                         <div class="product-rate">
                             <i class="fa-solid fa-star"></i>
@@ -170,7 +180,7 @@ Hero Area
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
-              <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
+              <a class="product-cart" href="">add to cart</a>
               </span>
                         <div class="product-rate">
                             <i class="fa-solid fa-star"></i>
@@ -204,7 +214,7 @@ Hero Area
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
-              <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
+              <a class="product-cart" href="">add to cart</a>
               </span>
                         <div class="product-rate">
                             <i class="fa-solid fa-star"></i>
@@ -238,7 +248,7 @@ Hero Area
                         </h3>
                         <span class="product-price">
             <span class="product-price__number">$355.00</span>
-              <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
+              <a class="product-cart" href="">add to cart</a>
               </span>
                         <div class="product-rate">
                             <i class="fa-solid fa-star"></i>
@@ -372,7 +382,7 @@ Hero Area
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$355.00</span>
-                  <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
+                  <a class="product-cart" href="">add to cart</a>
                   </span>
                             </div>
                         </div>
@@ -400,7 +410,7 @@ Hero Area
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$355.00</span>
-                  <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
+                  <a class="product-cart" href="">add to cart</a>
                   </span>
                             </div>
                         </div>
@@ -428,7 +438,7 @@ Hero Area
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$250.00</span>
-                  <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
+                  <a class="product-cart" href="">add to cart</a>
                   </span>
                             </div>
                         </div>
@@ -456,7 +466,7 @@ Hero Area
                                 </h3>
                                 <span class="product-price">
                 <span class="product-price__number">$155.00</span>
-                  <a class="product-cart" href="{{route('add-to-cart')}}">add to cart</a>
+                  <a class="product-cart" href="">add to cart</a>
                   </span>
                             </div>
                         </div>
