@@ -287,39 +287,19 @@ Hero Area
                             <img src="{{asset('/')}}website/assets/img/shapes/title-shape-2.svg" alt="title shape">
                         </div>
                         <div class="row vs-carousel" data-slide-show="3" data-lg-slide-show="2" data-md-slide-show="2">
+                            @foreach($home_categories as $home_category)
                             <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.25s">
                                 <div class="cate-style1">
                                     <div class="cate-img">
-                                        <img src="{{asset('/')}}website/assets/img/categories/cate-1-1.jpg" alt="categories">
+                                        <img src="{{asset($home_category->home_image)}}" alt="categories">
                                     </div>
                                     <h3 class="cate-title">
-                                        <a href="{{route('shop.index')}}">wedding ring</a>
+                                        <a href="{{route('shop.product-by-category',['id'=>$home_category->id])}}">{{$home_category->name}}</a>
                                     </h3>
                                     <span class="cate-stock">20 product</span>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.45s">
-                                <div class="cate-style1">
-                                    <div class="cate-img">
-                                        <img src="{{asset('/')}}website/assets/img/categories/cate-1-2.jpg" alt="categories">
-                                    </div>
-                                    <h3 class="cate-title">
-                                        <a href="{{route('shop.index')}}">Diamond Pendant</a>
-                                    </h3>
-                                    <span class="cate-stock">15 product</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-delay="0.65s">
-                                <div class="cate-style1">
-                                    <div class="cate-img">
-                                        <img src="{{asset('/')}}website/assets/img/categories/cate-1-3.jpg" alt="categories">
-                                    </div>
-                                    <h3 class="cate-title">
-                                        <a href="{{route('shop.index')}}">Woman Earring</a>
-                                    </h3>
-                                    <span class="cate-stock">10 product</span>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

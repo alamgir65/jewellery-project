@@ -35,6 +35,14 @@
                         </div>
                     </div>
                     <div class="row mb-4">
+                        <label class="col-sm-2 col-form-label" for="basic-default-email">Category Home Image</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" name="home_image">
+                            <img src="{{asset($category->home_image)}}" alt="image" height="50">
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
                         <label class="col-sm-2 col-form-label">Description</label>
                         <div class="col-sm-10">
                             <textarea name="description" class="form-control" placeholder="Category Description">{{$category->description}}</textarea>

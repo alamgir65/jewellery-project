@@ -6,13 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    public static $image,$imageName,$imageUrl,$directory,$category;
+    public static $image,$imageName,$imageUrl,$directory,$category,$homeImageUrl;
 //    Function for new category add
     public static function newCategory($request){
         self::$category = new Category();
         self::$category->name = $request->name;
         self::$category->status = $request->status;
         self::$category->image = self::getImageUrl($request);
+        if($request->file('home_image')){
+            self::$category->home_image = self::getHomeImageUrl($request);
+        }
+        else{
+            self::$category->home_image = '';
+        }
         self::$category->description = $request->description;
         self::$category->save();
     }
@@ -28,10 +34,20 @@ class Category extends Model
         else{
             self::$imageUrl = self::$category->image;
         }
+        if($request->file('home_image')){
+            if(file_exists(self::$category->home_image)){
+                unlink(self::$category->home_image);
+            }
+            self::$homeImageUrl = self::getHomeImageUrl($request);
+        }
+        else{
+            self::$homeImageUrl = self::$category->home_image;
+        }
 
         self::$category->name = $request->name;
         self::$category->status = $request->status;
         self::$category->image = self::$imageUrl;
+        self::$category->home_image = self::$homeImageUrl;
         self::$category->description = $request->description;
         self::$category->save();
     }
@@ -52,6 +68,13 @@ class Category extends Model
         self::$imageUrl = self::$directory . self::$imageName;
         return self::$imageUrl;
     }
-
+    public static function getHomeImageUrl($request){
+        self::$image = $request->file('home_image');
+        self::$imageName = self::$image->getClientOriginalName();
+        self::$directory = 'uploads/category-images/';
+        self::$image->move(self::$directory , self::$imageName);
+        self::$homeImageUrl = self::$directory . self::$imageName;
+        return self::$homeImageUrl;
+    }
 
 }
