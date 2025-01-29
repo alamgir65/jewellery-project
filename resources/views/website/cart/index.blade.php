@@ -159,7 +159,7 @@
                         </tr>
                         </tfoot>
                     </table>
-                    <div class="wc-proceed-to-checkout mb-30"><a href="{{route('checkout')}}" class="vs-btn">Proceed
+                    <div class="wc-proceed-to-checkout mb-30"><a href="{{route('checkout.index')}}" class="vs-btn">Proceed
                             to checkout</a></div>
                 </div>
             </div>
