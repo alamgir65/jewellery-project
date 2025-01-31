@@ -17,6 +17,7 @@ class OrderDetails extends Model
             self::$orderDetails->product_qty = $item->qty;
             self::$orderDetails->product_price = $item->price;
             self::$orderDetails->save();
+            Cart::remove($item->rowId);
         }
 
     }

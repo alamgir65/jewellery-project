@@ -20,10 +20,31 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($brands as $brand)
+                @foreach($orders as $order)
                     <tr>
                         <td>{{$loop->iteration}}</td>
+                        <td>{{$order->customer_id}}</td>
+                        <td>{{$order->order_date}}</td>
+                        <td>{{$order->order_total}}</td>
+                        <td>{{$order->order_status}}</td>
+                        <td>
+                            <a href="{{route('category.edit',['id'=>$order->id])}}" class="btn btn-info">
+                                Details
+                            </a>
+                            <a href="{{route('category.delete',['id'=>$order->id])}}" class="btn btn-success " onclick="confirm('Are you want to delete this category?')">
+                                Invoice
+                            </a>
+                            <a href="{{route('category.edit',['id'=>$order->id])}}" class="btn btn-primary">
+                                Print
+                            </a>
+                            <a href="{{route('category.delete',['id'=>$order->id])}}" class="btn btn-warning" onclick="confirm('Are you want to delete this category?')">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                            <a href="{{route('category.delete',['id'=>$order->id])}}" class="btn btn-danger " onclick="confirm('Are you want to delete this category?')">
+                                <i class="fa fa-trash"></i>
+                            </a>
 
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>

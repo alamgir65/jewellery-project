@@ -232,13 +232,7 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="app-user-list.html" class="menu-link">
-                                <div>Add Order</div>
-                            </a>
-                        </li>
-
-                        <li class="menu-item">
-                            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <a href="{{route('order.index')}}" class="menu-link">
                                 <div>Manage Order</div>
                             </a>
                         </li>
