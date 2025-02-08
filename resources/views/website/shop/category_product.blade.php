@@ -84,7 +84,7 @@
                                                 <path d="M9.465 14.6076C9.21 14.6976 8.79 14.6976 8.535 14.6076C6.36 13.8651 1.5 10.7676 1.5 5.51757C1.5 3.20007 3.3675 1.32507 5.67 1.32507C7.035 1.32507 8.2425 1.98507 9 3.00507C9.7575 1.98507 10.9725 1.32507 12.33 1.32507C14.6325 1.32507 16.5 3.20007 16.5 5.51757C16.5 10.7676 11.64 13.8651 9.465 14.6076Z" stroke="#6D747B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </button>
-                                        <a href="{{route('shop.details',['id'=>$product->id])}}">
+                                        <a href="">
                                             <button class="product-action__btn">
                                                 <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M18.5273 6.363C17.8445 4.86967 15.1666 0 9.33323 0C3.4999 0 0.822011 4.86967 0.139122 6.363C0.0474519 6.56312 0 6.78066 0 7.00078C0 7.2209 0.0474519 7.43843 0.139122 7.63856C0.822011 9.13033 3.4999 14 9.33323 14C15.1666 14 17.8445 9.13033 18.5273 7.637C18.6188 7.4371 18.6662 7.21984 18.6662 7C18.6662 6.78016 18.6188 6.5629 18.5273 6.363ZM9.33323 12.4444C4.42779 12.4444 2.13879 8.27089 1.55546 7.00856C2.13879 5.72911 4.42779 1.55556 9.33323 1.55556C14.227 1.55556 16.5168 5.71122 17.111 7C16.5168 8.28878 14.227 12.4444 9.33323 12.4444Z" fill="#6D747B" />
@@ -98,11 +98,11 @@
                                     </div>
                                     <div class="product-content">
                                         <h3 class="product-title">
-                                            <a href="{{route('shop.details',['id'=>$product->id])}}">{{$product->name}}</a>
+                                            <a href="">{{$product->name}}</a>
                                         </h3>
                                         <span class="product-price">
                   <span class="product-price__number">{{$product->selling_price}}</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                         <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                             <span></span>
@@ -139,7 +139,7 @@
                                     </h3>
                                     <span class="product-price">
                   <span class="product-price__number">$155.00</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                     <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                         <span></span>
@@ -171,7 +171,7 @@
                                     </h3>
                                     <span class="product-price">
                   <span class="product-price__number">$155.00</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                     <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                         <span></span>
@@ -203,7 +203,7 @@
                                     </h3>
                                     <span class="product-price">
                   <span class="product-price__number">$155.00</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                     <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                         <span></span>
@@ -235,7 +235,7 @@
                                     </h3>
                                     <span class="product-price">
                   <span class="product-price__number">$155.00</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                     <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                         <span></span>
@@ -267,7 +267,7 @@
                                     </h3>
                                     <span class="product-price">
                   <span class="product-price__number">$155.00</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                     <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                         <span></span>
@@ -299,7 +299,7 @@
                                     </h3>
                                     <span class="product-price">
                   <span class="product-price__number">$155.00</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                     <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                         <span></span>
@@ -331,7 +331,7 @@
                                     </h3>
                                     <span class="product-price">
                   <span class="product-price__number">$155.00</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                     <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                         <span></span>
@@ -363,7 +363,7 @@
                                     </h3>
                                     <span class="product-price">
                   <span class="product-price__number">$155.00</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                     <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                         <span></span>
@@ -395,7 +395,7 @@
                                     </h3>
                                     <span class="product-price">
                   <span class="product-price__number">$155.00</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                     <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                         <span></span>
@@ -427,7 +427,7 @@
                                     </h3>
                                     <span class="product-price">
                   <span class="product-price__number">$155.00</span>
-                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
+                    <a class="product-cart" href="">add to cart</a>
                     </span>
                                     <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                         <span></span>

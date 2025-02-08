@@ -14,6 +14,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CustomerAuthController;
 use App\Http\Controllers\AdminOrderController;
+use App\Http\Controllers\CourierController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
@@ -74,6 +75,13 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/unit/edit/{id}',[UnitController::class,'edit'])->name('unit.edit');
     Route::post('/unit/update/{id}',[UnitController::class,'update'])->name('unit.update');
     Route::get('/unit/delete/{id}',[UnitController::class,'delete'])->name('unit.delete');
+
+    Route::get('/courier/index',[CourierController::class,'index'])->name('courier.index');
+    Route::get('/courier/create',[CourierController::class,'create'])->name('courier.create');
+    Route::post('/courier/store',[CourierController::class,'store'])->name('courier.store');
+    Route::get('/courier/edit/{id}',[CourierController::class,'edit'])->name('courier.edit');
+    Route::post('/courier/update/{id}',[CourierController::class,'update'])->name('courier.update');
+    Route::get('/courier/delete/{id}',[CourierController::class,'delete'])->name('courier.delete');
 
     Route::get('/product/index',[ProductController::class,'index'])->name('product.index');
     Route::get('/product/create',[ProductController::class,'create'])->name('product.create');
