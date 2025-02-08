@@ -27,3 +27,15 @@ blog.html             ------>  {{route('blog.index')}}
 blog-list.html        ------>  {{route('blog-list')}}
 blog-details.html     ------>  {{route('blog-details')}}
 {{route('home')}}
+
+
+
+Invoice :
+--------
+https://github.com/sparksuite/simple-html-invoice-template
+https://packagist.org/packages/barryvdh/laravel-dompdf
+note: invoice print korar khetre full html code ta blade file a rakhte hobe.
+
+Sslcommerz payment gateway system :
+----------------------------------
+
