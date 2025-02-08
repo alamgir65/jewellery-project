@@ -28,19 +28,19 @@
                         <td>{{$order->order_total}}</td>
                         <td>{{$order->order_status}}</td>
                         <td>
-                            <a href="{{route('category.edit',['id'=>$order->id])}}" class="btn btn-info">
+                            <a href="{{route('order.details',['id'=>$order->id])}}" class="btn btn-info my-1">
                                 Details
                             </a>
-                            <a href="{{route('category.delete',['id'=>$order->id])}}" class="btn btn-success " onclick="confirm('Are you want to delete this category?')">
+                            <a href="{{route('order.invoice',['id' => $order->id])}}" class="btn btn-success my-1" >
                                 Invoice
                             </a>
-                            <a href="{{route('category.edit',['id'=>$order->id])}}" class="btn btn-primary">
+                            <a href="{{route('order.print-invoice',['id'=>$order->id])}}" class="btn btn-primary my-1" target="_blank">
                                 Print
                             </a>
-                            <a href="{{route('category.delete',['id'=>$order->id])}}" class="btn btn-warning" onclick="confirm('Are you want to delete this category?')">
+                            <a href="{{route('order.edit',['id' => $order->id])}}" class="btn btn-warning my-1" >
                                 <i class="fa fa-edit"></i>
                             </a>
-                            <a href="{{route('category.delete',['id'=>$order->id])}}" class="btn btn-danger " onclick="confirm('Are you want to delete this category?')">
+                            <a href="" class="btn btn-danger my-1" onclick="confirm('Are you want to delete this category?')">
                                 <i class="fa fa-trash"></i>
                             </a>
 
