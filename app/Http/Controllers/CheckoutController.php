@@ -21,9 +21,16 @@ class CheckoutController extends Controller
         return view('website.checkout.billingInfo',['categories' => Category::all()]);
     }
     public function newOrder(Request $request){
-        $this->orderId = Order::newOrder($request);
-        OrderDetails::newOrderDetails($this->orderId);
-        return redirect('/checkout/complete-order')->with('message','Your order post successfully, We will contact with you soon');
+        if($request->payment_method == 'COD'){
+            $this->orderId = Order::newOrder($request);
+            OrderDetails::newOrderDetails($this->orderId);
+            return redirect('/checkout/complete-order')->with('message','Your order post successfully, We will contact with you soon');
+
+        }
+        elseif($request->payment_method == 'Online'){
+            $sslPayment = new SslCommerzPaymentController();
+            $sslPayment->index($request);
+        }
     }
     public function completeOrder(){
         return view('website.checkout.complete-order',['categories' => Category::all()]);

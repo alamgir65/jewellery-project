@@ -38,4 +38,9 @@ note: invoice print korar khetre full html code ta blade file a rakhte hobe.
 
 Sslcommerz payment gateway system :
 ----------------------------------
+1.https://github.com/sslcommerz
+Read this Laravel Readme file and follow this instruction to use sslcommerz system in your websites.
+2.https://laravel.com/docs/11.x/csrf
+Add this validatescsrftoken middleware inside your database/app/php file and insert 5th instructions data into your
+middleware .
 

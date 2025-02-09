@@ -116,7 +116,7 @@
                                     <p>Cash on delivery (COD) lets you pay for your order in cash when it arrives at your doorstep.</p>
                                 </div>
                             </li>
-                            <li class="wc_payment_method payment_method_paypal"><input id="payment_method_paypal" type="radio" class="input-radio" name="payment_method" value="Online"> <label for="payment_method_paypal">Bkash</label>
+                            <li class="wc_payment_method payment_method_paypal"><input id="payment_method_paypal" type="radio" class="input-radio" name="payment_method" value="Online"> <label for="payment_method_paypal">Online</label>
                                 <div class="payment_box payment_method_paypal">
                                     <p>Pay via Bkash; you can pay with your credit card if you don’t have a PayPal account.
                                     </p>
