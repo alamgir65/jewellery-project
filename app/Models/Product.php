@@ -31,7 +31,9 @@ class Product extends Model
     public static function updateProduct($request,$id){
         self::$product = Product::find($id);
         if($request->file('image')){
-            unlink(self::$product->image);
+            if(file_exists(self::$product->image)){
+                unlink(self::$product->image);
+            }
             self::$imageUrl = self::getImageUrl($request);
         }else{
             self::$imageUrl = self::$product->image;

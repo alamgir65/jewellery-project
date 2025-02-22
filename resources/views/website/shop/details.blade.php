@@ -63,11 +63,9 @@
                                 </div>
                                 <span class="product-rating__total">3 review</span>
                             </div>
-                            <h2 class="product-title">dound Dial watch</h2>
-                            <p class="product-price">$1250.00 <span>in stock</span></p>
-                            <p class="product-desc">Lorem ipsum dolor sit amet, conse elit, sedid that was eiusmod
-                                aboret dolore magna aliqua conseel usndi daimond the laois
-                                sitamet sedid sedid eiusm.</p>
+                            <h2 class="product-title">{{$product->name}}</h2>
+                            <p class="product-price">BDT {{$product->selling_price}} <span>in stock</span></p>
+                            <p class="product-desc"> {!! $product->short_description !!}</p>
                             <div class="product-swatches-container">
                                 <div class="swatch swatch1 active"></div>
                                 <div class="swatch swatch2"></div>
@@ -133,11 +131,7 @@
                     <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                         <div class="desc-content">
                             <h3 class="desc-title">Why choose product?</h3>
-                            <p class="desc-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, dolore magna eiusmod
-                                tempor incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                nisi ut aliquip ex ea commodo consequat. Duis aute iruremod thats dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p class="desc-text">{!! $product->long_description !!}</p>
                             <span class="desc-subtitle">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -254,51 +248,19 @@
                 </div>
             </div>
             <div class="row vs-carousel" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2">
-                <div class="col-lg-3">
+                @foreach($related_products as $related_product)
+                    <div class="col-lg-3">
                     <div class="product-style2 version2">
                         <div class="product-img">
-                            <img class="img" src="{{asset('/')}}website/assets/img/products2/product-r-1-1.png" alt="product">
+                            <img class="img" src="{{asset($related_product->image)}}" alt="product">
                         </div>
                         <h3 class="product-title">
-                            <a href="shop-details.html">triumph watch</a>
+                            <a href="shop-details.html">{{$related_product->name}}</a>
                         </h3>
-                        <span class="product-price">$755.00</span>
+                        <span class="product-price">BDT {{$related_product->selling_price}}</span>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="product-style2 version2">
-                        <a href="#new" class="product-tag">new</a>
-                        <div class="product-img">
-                            <img class="img" src="{{asset('/')}}website/assets/img/products2/product-r-1-2.png" alt="product">
-                        </div>
-                        <h3 class="product-title">
-                            <a href="shop-details.html">golden line</a>
-                        </h3>
-                        <span class="product-price">$955.00</span>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="product-style2 version2">
-                        <div class="product-img">
-                            <img class="img" src="{{asset('/')}}website/assets/img/products2/product-r-1-3.png" alt="product">
-                        </div>
-                        <h3 class="product-title">
-                            <a href="shop-details.html">Round Dial semi</a>
-                        </h3>
-                        <span class="product-price">$555.00</span>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="product-style2 version2">
-                        <div class="product-img">
-                            <img class="img" src="{{asset('/')}}website/assets/img/products2/product-r-1-4.png" alt="product">
-                        </div>
-                        <h3 class="product-title">
-                            <a href="shop-details.html">Black Dial Red</a>
-                        </h3>
-                        <span class="product-price">$355.00</span>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

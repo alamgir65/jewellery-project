@@ -330,7 +330,8 @@ Hero Area
                 </div>
                 <div class="col-lg-8">
                     <div class="row gx-20">
-                        <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.2s">
+                        @foreach($home_products as $home_product)
+                            <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.2s">
                             <div class="product-style2">
                                 <div class="product-action">
                                     <button class="product-action__btn">
@@ -345,103 +346,20 @@ Hero Area
                                         </svg>
                                     </button>
                                 </div>
-                                <img src="{{asset('/')}}website/assets/img/products2/product-ele-2.svg" alt="product" class="ele1">
+                                <img src="{{asset($home_product->image)}}" alt="product" class="ele1">
                                 <div class="product-img">
-                                    <img class="img" src="{{asset('/')}}website/assets/img/products2/product-1-1.png" alt="product">
+                                    <img class="img" src="{{asset($home_product->image)}}" alt="product">
                                 </div>
                                 <h3 class="product-title">
-                                    <a href="{{route('shop.index')}}">Flower Pendant</a>
+                                    <a href="{{route('shop.details',['id'=>$home_product->id])}}">{{$home_product->name}}</a>
                                 </h3>
                                 <span class="product-price">
-                <span class="product-price__number">$355.00</span>
-                  <a class="product-cart" href="">add to cart</a>
+                <span class="product-price__number">{{$home_product->selling_price}}</span>
+                  <a class="product-cart" href="{{route('shop.details',['id'=>$home_product->id])}}">add to cart</a>
                   </span>
                             </div>
                         </div>
-                        <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.3s">
-                            <div class="product-style2">
-                                <div class="product-action">
-                                    <button class="product-action__btn">
-                                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                    <button class="product-action__btn">
-                                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <img src="{{asset('/')}}website/assets/img/products2/product-ele-2.svg" alt="product" class="ele1">
-                                <div class="product-img">
-                                    <img class="img" src="{{asset('/')}}website/assets/img/products2/product-1-2.png" alt="product">
-                                </div>
-                                <h3 class="product-title">
-                                    <a href="{{route('shop.index')}}">wedding ring</a>
-                                </h3>
-                                <span class="product-price">
-                <span class="product-price__number">$355.00</span>
-                  <a class="product-cart" href="">add to cart</a>
-                  </span>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
-                            <div class="product-style2">
-                                <div class="product-action">
-                                    <button class="product-action__btn">
-                                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                    <button class="product-action__btn">
-                                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <img src="{{asset('/')}}website/assets/img/products2/product-ele-2.svg" alt="product" class="ele1">
-                                <div class="product-img">
-                                    <img class="img" src="{{asset('/')}}website/assets/img/products2/product-1-3.png" alt="product">
-                                </div>
-                                <h3 class="product-title">
-                                    <a href="{{route('shop.index')}}">Multi Stone Set</a>
-                                </h3>
-                                <span class="product-price">
-                <span class="product-price__number">$250.00</span>
-                  <a class="product-cart" href="">add to cart</a>
-                  </span>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.5s">
-                            <div class="product-style2">
-                                <div class="product-action">
-                                    <button class="product-action__btn">
-                                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.62 18.8101C11.28 18.9301 10.72 18.9301 10.38 18.8101C7.48 17.8201 1 13.6901 1 6.6901C1 3.6001 3.49 1.1001 6.56 1.1001C8.38 1.1001 9.99 1.9801 11 3.3401C12.01 1.9801 13.63 1.1001 15.44 1.1001C18.51 1.1001 21 3.6001 21 6.6901C21 13.6901 14.52 17.8201 11.62 18.8101Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                    <button class="product-action__btn">
-                                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.5799 9.99992C14.5799 11.9799 12.9799 13.5799 10.9999 13.5799C9.01992 13.5799 7.41992 11.9799 7.41992 9.99992C7.41992 8.01992 9.01992 6.41992 10.9999 6.41992C12.9799 6.41992 14.5799 8.01992 14.5799 9.99992Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M11.0001 18.27C14.5301 18.27 17.8201 16.19 20.1101 12.59C21.0101 11.18 21.0101 8.80997 20.1101 7.39997C17.8201 3.79997 14.5301 1.71997 11.0001 1.71997C7.47009 1.71997 4.18009 3.79997 1.89009 7.39997C0.990088 8.80997 0.990088 11.18 1.89009 12.59C4.18009 16.19 7.47009 18.27 11.0001 18.27Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <img src="{{asset('/')}}website/assets/img/products2/product-ele-2.svg" alt="product" class="ele1">
-                                <div class="product-img">
-                                    <img class="img" src="{{asset('/')}}website/assets/img/products2/product-1-4.png" alt="product">
-                                </div>
-                                <h3 class="product-title">
-                                    <a href="{{route('shop.index')}}">Designer Chain</a>
-                                </h3>
-                                <span class="product-price">
-                <span class="product-price__number">$155.00</span>
-                  <a class="product-cart" href="">add to cart</a>
-                  </span>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -686,54 +604,16 @@ Hero Area
         </div>
         <div class="container">
             <div class="instagram-layout1 vs-carousel" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
-                <div>
+                @foreach($products as $product)
+                    <div>
                     <div class="insta-style wow animate__fadeInUp" data-wow-delay="0.2s">
-                        <img src="{{asset('/')}}website/assets/img/instagram/inssta-1-1.jpg" alt="instagram">
+                        <img style="height: 250px !important;width: 300px !important;" src="{{asset($product->image)}}" alt="instagram">
                         <a href="https://www.instagram.com/" class="insta-icon">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-                <div>
-                    <div class="insta-style wow animate__fadeInUp" data-wow-delay="0.3s">
-                        <img src="{{asset('/')}}website/assets/img/instagram/inssta-1-2.jpg" alt="instagram">
-                        <a href="https://www.instagram.com/" class="insta-icon">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="insta-style wow animate__fadeInUp" data-wow-delay="0.4s">
-                        <img src="{{asset('/')}}website/assets/img/instagram/inssta-1-3.jpg" alt="instagram">
-                        <a href="https://www.instagram.com/" class="insta-icon">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="insta-style wow animate__fadeInUp" data-wow-delay="0.5s">
-                        <img src="{{asset('/')}}website/assets/img/instagram/inssta-1-4.jpg" alt="instagram">
-                        <a href="https://www.instagram.com/" class="insta-icon">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="insta-style wow animate__fadeInUp" data-wow-delay="0.6s">
-                        <img src="{{asset('/')}}website/assets/img/instagram/inssta-1-5.jpg" alt="instagram">
-                        <a href="https://www.instagram.com/" class="insta-icon">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="insta-style wow animate__fadeInUp" data-wow-delay="0.7s">
-                        <img src="{{asset('/')}}website/assets/img/instagram/inssta-1-6.jpg" alt="instagram">
-                        <a href="https://www.instagram.com/" class="insta-icon">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

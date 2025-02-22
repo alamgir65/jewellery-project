@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
+    public $product;
     public function index(){
         return view('website.shop.index',[
             'categories'=>Category::all(),
@@ -14,9 +15,11 @@ class ShopController extends Controller
         ]);
     }
     public function detail($id){
+        $this->product = Product::find($id);
         return view('website.shop.details',[
             'categories'=>Category::all(),
-            'product'=>Product::find($id)
+            'product'=>Product::find($id),
+            'related_products' => Product::where('category_id',$this->product->category_id)->get()
         ]);
     }
     public function productSideBar(){

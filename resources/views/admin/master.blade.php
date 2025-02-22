@@ -269,7 +269,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="app-access-permission.html" class="menu-link">
+                            <a href="{{route('users.index')}}" class="menu-link">
                                 <div>Manage User</div>
                             </a>
                         </li>
