@@ -16,6 +16,7 @@ use App\Http\Controllers\CustomerAuthController;
 use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\CourierController;
 use App\Http\Controllers\SslCommerzPaymentController;
+use App\Http\Controllers\AdminCustomerController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
@@ -115,4 +116,11 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::post('/order/update/{id}',[AdminOrderController::class,'update'])->name('order.update');
     Route::get('/order/invoice/{id}',[AdminOrderController::class,'invoice'])->name('order.invoice');
     Route::get('/order/print-invoice/{id}',[AdminOrderController::class,'invoicePrint'])->name('order.print-invoice');
+
+    Route::get('/admin/customer/index',[AdminCustomerController::class,'index'])->name('admin-customer.index');
+    Route::get('/admin/customer/create',[AdminCustomerController::class,'create'])->name('admin-customer.create');
+    Route::post('/admin/customer/store',[AdminCustomerController::class,'store'])->name('admin-customer.store');
+    Route::get('/admin/customer/edit/{id}',[AdminCustomerController::class,'edit'])->name('admin-customer.edit');
+    Route::post('/admin/customer/update/{id}',[AdminCustomerController::class,'update'])->name('admin-customer.update');
+    Route::get('/admin/customer/delete/{id}',[AdminCustomerController::class,'delete'])->name('admin-customer.delete');
 });
