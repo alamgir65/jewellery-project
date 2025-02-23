@@ -264,7 +264,7 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="app-access-roles.html" class="menu-link">
+                            <a href="{{route('users.create')}}" class="menu-link">
                                 <div>Add User </div>
                             </a>
                         </li>
@@ -649,7 +649,11 @@
                         <li class="nav-item navbar-dropdown dropdown-user dropdown">
                             <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
                                 <div class="avatar avatar-online">
-                                    <img src="{{asset('/')}}admin/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                                    @if(Auth::user()->profile_photo_path)
+                                        <img src="{{asset(Auth::user()->profile_photo_path)}}" alt class="w-px-40 h-auto rounded-circle">
+                                    @else
+                                        <img src="{{asset('/')}}admin/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                                    @endif
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end mt-3 py-2">
@@ -658,11 +662,15 @@
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0 me-2">
                                                 <div class="avatar avatar-online">
-                                                    <img src="{{asset('/')}}admin/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                                                    @if(Auth::user()->profile_photo_path)
+                                                        <img src="{{asset(Auth::user()->profile_photo_path)}}" alt class="w-px-40 h-auto rounded-circle">
+                                                    @else
+                                                        <img src="{{asset('/')}}admin/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1">
-                                                <h6 class="mb-0 small">John Doe</h6>
+                                                <h6 class="mb-0 small">{{Auth::user()->name}}</h6>
                                                 <small class="text-muted">Admin</small>
 
                                             </div>

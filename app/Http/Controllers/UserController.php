@@ -20,7 +20,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user.create');
     }
 
     /**
@@ -28,7 +28,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::newUser($request);
+        return back()->with('message','User created successfully');
     }
 
     /**
@@ -36,7 +37,7 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
@@ -44,7 +45,7 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.user.edit',['user' => User::find($id)]);
     }
 
     /**
@@ -52,7 +53,8 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        User::updateUser($request,$id);
+        return redirect('/users')->with('message','User updated successfully');
     }
 
     /**
@@ -60,6 +62,7 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        User::deleteUser($id);
+        return back()->with('message','User deleted successfully');
     }
 }

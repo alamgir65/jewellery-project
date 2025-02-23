@@ -9,6 +9,7 @@
     <div class="card">
         <div class="card-datatable table-responsive pt-0">
             <table class="datatables-basic table table-bordered">
+                <span class="text-success">{{session('message')}}</span>
                 <thead>
                 <tr>
                     <th>Sl</th>
@@ -30,12 +31,14 @@
                             <img src="{{asset($user->profile_photo_path)}}" alt="image" height="60">
                         </td>
                         <td>
-                            <a href="" class="btn btn-info">
+                            <a href="{{route('users.edit',$user->id)}}" class="btn btn-info">
                                 <i class="fa fa-edit"></i>
                             </a>
-                            <a href="" class="btn btn-danger" onclick="return confirm('Are you want to delete this Customer?')">
-                                <i class="fa fa-trash"></i>
-                            </a>
+                            <form action="{{route('users.destroy',$user->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger" {{$user->id == 1 || $user->id == Auth::user()->id?'disabled':''}} onclick="return confirm('Are you want to delete this Customer?')"><i class="fa fa-trash"></i></button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

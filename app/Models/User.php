@@ -64,4 +64,55 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    public static $image,$imageName,$imageUrl,$directory,$user,$homeImageUrl;
+//    Function for new category add
+    public static function newUser($request){
+        self::$user = new User();
+        self::$user->name = $request->name;
+        self::$user->email = $request->email;
+        self::$user->mobile = $request->mobile;
+        self::$user->password = bcrypt($request->password);
+        self::$user->profile_photo_path = self::getImageUrl($request);
+        self::$user->save();
+    }
+//    Function for update category
+    public static function updateUser($request,$id){
+        self::$user = User::find($id);
+        if($request->file('image')){
+            if(file_exists(self::$user->profile_photo_path)){
+                unlink(self::$user->profile_photo_path);
+            }
+            self::$imageUrl = self::getImageUrl($request);
+        }
+        else{
+            self::$imageUrl = self::$user->profile_photo_path;
+        }
+
+        self::$user->name = $request->name;
+        self::$user->email = $request->email;
+        self::$user->mobile = $request->mobile;
+        if($request->password){
+            self::$user->password = bcrypt($request->password);
+        }
+        self::$user->save();
+    }
+//    Category delete function
+    public static function deleteUser($id){
+        self::$user = User::find($id);
+        if(file_exists(self::$user->profile_photo_path)){
+            unlink(self::$user->profile_photo_path);
+        }
+        self::$user->delete();
+    }
+//    Function for image Url
+    public static function getImageUrl($request){
+        self::$image = $request->file('image');
+        self::$imageName = self::$image->getClientOriginalName();
+        self::$directory = 'uploads/user-images/';
+        self::$image->move(self::$directory , self::$imageName);
+        self::$imageUrl = self::$directory . self::$imageName;
+        return self::$imageUrl;
+    }
 }
