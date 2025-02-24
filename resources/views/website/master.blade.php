@@ -111,7 +111,7 @@
                     <a href="{{route('about')}}">About</a>
                     <ul class="sub-menu">
                         <li><a href="{{route('about')}}">About</a></li>
-                        <li><a href="{{route('faq')}}">Faq’s</a></li>
+                        <li><a href="{{route('faqs')}}">Faq’s</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children">
@@ -121,7 +121,7 @@
                     <a href="{{route('shop.index')}}">jewellery</a>
                 </li>
                 <li class="menu-item-has-children mega-menu-wrap">
-                    <a href="{{route('faq')}}">Faq's</a>
+                    <a href="{{route('faqs')}}">Faq's</a>
                 </li>
                 <li>
                     <a href="{{route('contact')}}">Contact</a>
@@ -214,7 +214,7 @@
                             <a href="{{route('about')}}">About</a>
                             <ul class="sub-menu">
                                 <li><a href="{{route('about')}}">About</a></li>
-                                <li><a href="{{route('faq')}}">Faq’s</a></li>
+                                <li><a href="{{route('faqs')}}">Faq’s</a></li>
                             </ul>
                         </li>
                         <li class="menu-item-has-children">
@@ -224,7 +224,7 @@
                             <a href="{{route('shop.index')}}">jewellery</a>
                         </li>
                         <li class="menu-item-has-children mega-menu-wrap">
-                            <a href="{{route('faq')}}">Faq's</a>
+                            <a href="{{route('faqs')}}">Faq's</a>
                         </li>
                         <li>
                             <a href="{{route('contact')}}">Contact</a>
@@ -365,7 +365,7 @@
                                         <a href="{{route('about')}}">About</a>
                                         <ul class="sub-menu">
                                             <li><a href="{{route('about')}}">About</a></li>
-                                            <li><a href="{{route('faq')}}">Faq’s</a></li>
+                                            <li><a href="{{route('faqs')}}">Faq’s</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
@@ -375,7 +375,7 @@
                                         <a href="{{route('shop.index')}}">jewellery</a>
                                     </li>
                                     <li class="menu-item-has-children mega-menu-wrap">
-                                        <a href="{{route('faq')}}">Faq's</a>
+                                        <a href="{{route('faqs')}}">Faq's</a>
                                     </li>
                                     <li>
                                         <a href="{{route('contact')}}">Contact</a>

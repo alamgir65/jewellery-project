@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Product;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
@@ -25,6 +26,6 @@ class WebsiteController extends Controller
         return view('website.home.about',['categories'=>Category::all()]);
     }
     public function faq(){
-        return view('website.home.faq',['categories'=>Category::all()]);
+        return view('website.home.faq',['categories'=>Category::all(),'faqs' => Faq::all()]);
     }
 }

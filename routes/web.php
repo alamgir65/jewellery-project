@@ -20,11 +20,12 @@ use App\Http\Controllers\AdminCustomerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
 Route::get('/about',[WebsiteController::class,'about'])->name('about');
-Route::get('/faq',[WebsiteController::class,'faq'])->name('faq');
+Route::get('/faqs',[WebsiteController::class,'faq'])->name('faqs');
 
 Route::get('/shop',[ShopController::class,'index'])->name('shop.index');
 Route::get('/shop/detail/{id}',[ShopController::class,'detail'])->name('shop.details');
@@ -32,6 +33,7 @@ Route::get('/shop/sidebar',[ShopController::class,'productSideBar'])->name('shop
 Route::get('/shop-product/by-category/{id}',[ShopController::class,'productByCategory'])->name('shop.product-by-category');
 
 Route::get('/search',[SearchController::class,'index'])->name('search');
+Route::post('/email',[ContactController::class,'index'])->name('send-email');
 
 Route::get('/cart/index',[CartController::class,'index'])->name('cart.index');
 Route::post('/cart/add/{id}',[CartController::class,'addToCart'])->name('add-to-cart');
