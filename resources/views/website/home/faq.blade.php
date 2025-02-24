@@ -55,65 +55,60 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                     How can I cancel it?
+                                     What materials are your jewelry pieces made from?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqVersion1">
                                 <div class="accordion-body">
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                                    born and I will give you a complete account.
+                                    Our jewelry is crafted from high-quality materials, including sterling silver, gold, platinum, and ethically sourced gemstones. Each product description provides detailed information about the materials used.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Good gathering image called, fifth good?
+                                    Do you offer customization or personalized jewelry?
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqVersion1">
                                 <div class="accordion-body">
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                                    born and I will give you a complete account.
+                                    Yes, we offer custom design services. If you're interested in creating a personalized piece, please contact our design team through our Custom Jewelry Page to discuss your ideas and requirements.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Over shall air can't subdue fly divide him?
+                                    What is your return and exchange policy?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqVersion1">
                                 <div class="accordion-body">
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                                    born and I will give you a complete account.
+                                    We accept returns and exchanges within 30 days of purchase, provided the item is in its original condition and packaging. Custom or personalized items are non-refundable. For detailed information, please refer to our Return Policy.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                    Waters one you'll creeping?
+                                    How can I determine my ring size?
                                 </button>
                             </h2>
                             <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqVersion1">
                                 <div class="accordion-body">
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                                    born and I will give you a complete account.
+                                    We provide a Ring Size Guide on our website to help you find your perfect fit. If you're still unsure, we recommend visiting a local jeweler for an accurate measurement.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                    Divide called?
+                                    Do you ship internationally?
                                 </button>
                             </h2>
                             <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqVersion1">
                                 <div class="accordion-body">
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                                    born and I will give you a complete account.
+                                    Yes, we offer international shipping to many countries. Shipping costs and delivery times vary based on the destination. Please visit our Shipping Information page for more details.
                                 </div>
                             </div>
                         </div>

@@ -19,6 +19,7 @@ use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\AdminCustomerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\FaqController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
@@ -128,5 +129,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::post('/admin/customer/update/{id}',[AdminCustomerController::class,'update'])->name('admin-customer.update');
     Route::get('/admin/customer/delete/{id}',[AdminCustomerController::class,'delete'])->name('admin-customer.delete');
 
+    Route::resource('faq',FaqController::class);
     Route::resource('users',UserController::class);
 });

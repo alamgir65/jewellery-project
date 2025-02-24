@@ -121,42 +121,7 @@
                     <a href="{{route('shop.index')}}">jewellery</a>
                 </li>
                 <li class="menu-item-has-children mega-menu-wrap">
-                    <a href="javascript:void(0)">Pages</a>
-                    <ul class="mega-menu">
-                        <li><a href="products-grid.html">Page List 1</a>
-                            <ul>
-                                <li><a href="{{route('home')}}">Home 1</a></li>
-{{--                                <li><a href="index-2.html">Home 2</a></li>--}}
-{{--                                <li><a href="index-3.html">Home 3</a></li>--}}
-                                <li><a href="{{route('about')}}">About</a></li>
-                                <li><a href="{{route('shop.sidebar')}}">watch</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Page List 2</a>
-                            <ul>
-                                <li><a href="{{route('shop.index')}}">jewellery</a></li>
-                                <li><a href="{{route('faq')}}">Faq's</a></li>
-                                <li><a href="{{route('blog.index')}}">Blog</a></li>
-                                <li><a href="{{route('blog-list')}}">Blog List</a></li>
-                                <li><a href="{{route('blog-details')}}">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Page List 3</a>
-                            <ul>
-                                <li><a href="{{route('shop.index')}}">Shop</a></li>
-                                <li><a href="{{route('shop.sidebar')}}">Shop Sidebar</a></li>
-                                <li><a href="shop-details.html">Shop Details</a></li>
-                                <li><a href="">My Cart</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Page List 4</a>
-                            <ul>
-                                <li><a href="404.html">404 Error</a></li>
-                                <li><a href="{{route('contact')}}">Contact Us</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <a href="{{route('faq')}}">Faq's</a>
                 </li>
                 <li>
                     <a href="{{route('contact')}}">Contact</a>
@@ -259,42 +224,7 @@
                             <a href="{{route('shop.index')}}">jewellery</a>
                         </li>
                         <li class="menu-item-has-children mega-menu-wrap">
-                            <a href="javascript:void(0)">Pages</a>
-                            <ul class="mega-menu">
-                                <li><a href="products-grid.html">Page List 1</a>
-                                    <ul>
-                                        <li><a href="{{route('home')}}">Home 1</a></li>
-                                        <li><a href="index-2.html">Home 2</a></li>
-                                        <li><a href="index-3.html">Home 3</a></li>
-                                        <li><a href="{{route('about')}}">About</a></li>
-                                        <li><a href="{{route('shop.sidebar')}}">watch</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Page List 2</a>
-                                    <ul>
-                                        <li><a href="{{route('shop.index')}}">jewellery</a></li>
-                                        <li><a href="{{route('faq')}}">Faq's</a></li>
-                                        <li><a href="{{route('blog.index')}}">Blog</a></li>
-                                        <li><a href="{{route('blog-list')}}">Blog List</a></li>
-                                        <li><a href="{{route('blog-details')}}">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Page List 3</a>
-                                    <ul>
-                                        <li><a href="{{route('shop.index')}}">Shop</a></li>
-                                        <li><a href="{{route('shop.sidebar')}}">Shop Sidebar</a></li>
-                                        <li><a href="shop-details.html">Shop Details</a></li>
-                                        <li><a href="">My Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Page List 4</a>
-                                    <ul>
-                                        <li><a href="404.html">404 Error</a></li>
-                                        <li><a href="{{route('contact')}}">Contact Us</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <a href="{{route('faq')}}">Faq's</a>
                         </li>
                         <li>
                             <a href="{{route('contact')}}">Contact</a>
@@ -445,42 +375,7 @@
                                         <a href="{{route('shop.index')}}">jewellery</a>
                                     </li>
                                     <li class="menu-item-has-children mega-menu-wrap">
-                                        <a href="javascript:void(0)">Pages</a>
-                                        <ul class="mega-menu">
-                                            <li><a href="products-grid.html">Page List 1</a>
-                                                <ul>
-                                                    <li><a href="{{route('home')}}">Home 1</a></li>
-                                                    <li><a href="index-2.html">Home 2</a></li>
-                                                    <li><a href="index-3.html">Home 3</a></li>
-                                                    <li><a href="{{route('about')}}">About</a></li>
-                                                    <li><a href="{{route('shop.sidebar')}}">watch</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Page List 2</a>
-                                                <ul>
-                                                    <li><a href="{{route('shop.index')}}">jewellery</a></li>
-                                                    <li><a href="{{route('faq')}}">Faq's</a></li>
-                                                    <li><a href="{{route('blog.index')}}">Blog</a></li>
-                                                    <li><a href="{{route('blog-list')}}">Blog List</a></li>
-                                                    <li><a href="{{route('blog-details')}}">Blog Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Page List 3</a>
-                                                <ul>
-                                                    <li><a href="{{route('shop.index')}}">Shop</a></li>
-                                                    <li><a href="{{route('shop.sidebar')}}">Shop Sidebar</a></li>
-                                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                                    <li><a href="">My Cart</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Page List 4</a>
-                                                <ul>
-                                                    <li><a href="404.html">404 Error</a></li>
-                                                    <li><a href="{{route('contact')}}">Contact Us</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <a href="{{route('faq')}}">Faq's</a>
                                     </li>
                                     <li>
                                         <a href="{{route('contact')}}">Contact</a>

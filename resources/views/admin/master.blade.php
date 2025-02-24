@@ -246,6 +246,25 @@
                 </li>
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <i class='menu-icon tf-icons ri-bill-line'></i>
+                        <div>Faq's Module</div>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="{{route('faq.create')}}" class="menu-link">
+                                <div>Add Faq</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{route('faq.index')}}" class="menu-link">
+                                <div>Manage Faq's</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons ri-user-line"></i>
                         <div>Order Module</div>
                     </a>
