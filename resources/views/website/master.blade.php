@@ -51,6 +51,9 @@
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="{{asset('/')}}website/assets/css/style.css">
      <style>
+         .hidden{
+             display: none;
+         }
         /* Show the dropdown menu when hovering */
         .nav-item.dropdown:hover .dropdown-menu {
             padding-top: 10px;
@@ -371,9 +374,14 @@
                 <div class="row align-items-end justify-content-between">
                     <div class="col-md-4 d-none d-md-block">
                         <form id="search-form" class="header-search">
-                            <input type="text" name="query" id="search-input" placeholder="search">
+                            <input type="text" name="query" id="search" placeholder="Search...">
                             <button type="submit" aria-label="search-button"><i class="far fa-search"></i></button>
                         </form>
+
+                        <ul id="ajaxSearchResult" style="width: 196px; position: absolute; top: 97px; border-radius: 20px;z-index: 10;" class="hidden absolute bg-white shadow-md rounded-lg w-full mt-2 p-2">
+                            <li style="list-style: none;color: #0a0c0e;font-weight: bold;">Search....</li>
+                        </ul>
+
                     </div>
                     <div class="col-md-4 text-center">
                         <div class="header-logo">
@@ -636,6 +644,50 @@
 <script src="{{asset('/')}}website/assets/js/bundled-lenis.min.js"></script>
 <!-- Main Js File -->
 <script src="{{asset('/')}}website/assets/js/main.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // ইনপুটে ক্লিক করলে সার্চ রেজাল্ট দেখাবে
+        $('#search').on('focus', function () {
+            $('#ajaxSearchResult').removeClass('hidden');
+        });
+
+        // বাইরে ক্লিক করলে সার্চ রেজাল্ট লুকিয়ে ফেলবে
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('#search, #ajaxSearchResult').length) {
+                $('#ajaxSearchResult').addClass('hidden'); // ✅ এখানে `addClass` করতে হবে
+            }
+        });
+
+        // AJAX সার্চ কার্যকর করা
+        $('#search').on('keyup', function () {
+            var search = $(this).val();
+            if (search !== '') {
+                $.ajax({
+                    type: 'GET',
+                    url: '{{ route('search') }}',
+                    data: { query: search },
+                    dataType: 'JSON',
+                    success: function (response) {
+                        var item = '';
+                        if (response.length === 0) {
+                            item += '<li class="text-sm text-gray-500">Result Not Found.</li>';
+                        } else {
+                            $.each(response, function (key, value) {
+                                item += '<li style="list-style: none;font-weight: bold;"><a href="http://localhost/jewellery/public/shop/detail/' + value.id + '" style="color: #0a0c0e;" class="block p-2 text-sm text-gray-500 hover:bg-gray-100">' + value.name + '</a></li>';
+                            });
+                        }
+                        $('#ajaxSearchResult').empty().append(item).removeClass('hidden');
+                    }
+                });
+            } else {
+                $('#ajaxSearchResult').empty().addClass('hidden');
+            }
+        });
+    });
+
+</script>
+
 </body>
 
 </html>
