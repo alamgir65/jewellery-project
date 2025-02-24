@@ -25,7 +25,7 @@
                 <h1 class="breadcumb-title">About Us</h1>
                 <div class="breadcumb-menu-wrap">
                     <ul class="breadcumb-menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{route('home')}}">Home</a></li>
                         <li>About Us</li>
                     </ul>
                 </div>
@@ -44,9 +44,7 @@
                         <span class="sec-subtitle">about us</span>
                         <h2 class="sec-title text-white">Graceful Drops</h2>
                         <img src="{{asset('/')}}website/assets/img/shapes/title-shape-1.svg" alt="title shape">
-                        <p class="sec-text pt-20">Lorem ipsum dolor sit amet, conse elit, sedid golden eiusmod tempor
-                            aboret dolore magna aliqua. ipsum conseel dimonds usndi labois
-                            sitamet sedid sedid do eiusm.</p>
+                        <p class="sec-text pt-20">Welcome to LUXRIO, your destination for exquisite and timeless jewelry. We craft unique, high-quality pieces that blend classic and contemporary designs, perfect for every occasion.</p>
                     </div>
                     <div class="row gy-4">
                         <div class="col-lg-auto col-md-6">
@@ -65,7 +63,7 @@
                     <hr class="about-divider">
                     <div class="row gy-4">
                         <div class="col-lg-auto col-md-6">
-                            <a href="shop.html" class="vs-btn style4" tabindex="0">contact us</a>
+                            <a href="{{route('contact')}}" class="vs-btn style4" tabindex="0">contact us</a>
                         </div>
                         <div class="col-lg-auto col-md-6">
                             <div class="call-box">
@@ -215,11 +213,8 @@
                         <span class="sec-subtitle">customs jewelry</span>
                         <h2 class="sec-title text-white">Graceful Ear Drops</h2>
                         <img src="{{asset('/')}}website/assets/img/shapes/title-shape-1.svg" alt="title shape">
-                        <p class="sec-text pt-20 mb-30 fw-medium">Lorem ipsum dolor sit amet, conse elit, sedid do eiusmod
-                            tempor incidit
-                            laboret dolore magna aliqua. Quis ipsum conseel usndi laboris
-                            sitamet sedid sedid do eiusm.</p>
-                        <a href="shop.html" class="vs-btn style4" tabindex="0">contact us</a>
+                        <p class="sec-text pt-20 mb-30 fw-medium">At LUXRIO, we believe jewelry reflects personal style and cherished memories. Our commitment to quality craftsmanship and ethically sourced materials ensures each piece tells a story of artistry and care.</p>
+                        <a href="{{route('contact')}}" class="vs-btn style4" tabindex="0">contact us</a>
                     </div>
                 </div>
             </div>

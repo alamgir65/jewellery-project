@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share(['website.master'], function($view){
+        View::composer(['website.master'], function($view){
             $view->with('categories',Category::all());
         });
     }

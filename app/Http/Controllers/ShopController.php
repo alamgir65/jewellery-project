@@ -23,7 +23,7 @@ class ShopController extends Controller
         ]);
     }
     public function productSideBar(){
-        return view('website.shop.sidebar',['categories'=>Category::all()]);
+        return view('website.shop.sidebar',['categories'=>Category::all(),'watches' => Product::where('category_id',7)->get()]);
     }
     public function productByCategory($id){
         return view('website.shop.category_product',[

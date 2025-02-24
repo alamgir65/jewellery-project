@@ -103,11 +103,6 @@
             <ul>
                 <li class="menu-item-has-children">
                     <a href="{{route('home')}}">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{route('home')}}">Home 1</a></li>
-                        <li><a href="index-2.html">Home 2</a></li>
-                        <li><a href="index-3.html">Home 3</a></li>
-                    </ul>
                 </li>
                 <li class="menu-item-has-children">
                     <a href="{{route('about')}}">About</a>
@@ -120,7 +115,7 @@
                     <a href="{{route('shop.sidebar')}}">watch</a>
                 </li>
                 <li>
-                    <a href="shop.html">jewellery</a>
+                    <a href="{{route('shop.index')}}">jewellery</a>
                 </li>
                 <li class="menu-item-has-children mega-menu-wrap">
                     <a href="javascript:void(0)">Pages</a>
@@ -128,15 +123,15 @@
                         <li><a href="products-grid.html">Page List 1</a>
                             <ul>
                                 <li><a href="{{route('home')}}">Home 1</a></li>
-                                <li><a href="index-2.html">Home 2</a></li>
-                                <li><a href="index-3.html">Home 3</a></li>
+{{--                                <li><a href="index-2.html">Home 2</a></li>--}}
+{{--                                <li><a href="index-3.html">Home 3</a></li>--}}
                                 <li><a href="{{route('about')}}">About</a></li>
                                 <li><a href="{{route('shop.sidebar')}}">watch</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Page List 2</a>
                             <ul>
-                                <li><a href="shop.html">jewellery</a></li>
+                                <li><a href="{{route('shop.index')}}">jewellery</a></li>
                                 <li><a href="{{route('faq')}}">Faq's</a></li>
                                 <li><a href="{{route('blog.index')}}">Blog</a></li>
                                 <li><a href="{{route('blog-list')}}">Blog List</a></li>
@@ -145,7 +140,7 @@
                         </li>
                         <li><a href="#">Page List 3</a>
                             <ul>
-                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="{{route('shop.index')}}">Shop</a></li>
                                 <li><a href="{{route('shop.sidebar')}}">Shop Sidebar</a></li>
                                 <li><a href="shop-details.html">Shop Details</a></li>
                                 <li><a href="">My Cart</a></li>
@@ -217,6 +212,7 @@
         <input type="text" class="border-theme" placeholder="What are you looking for">
         <button type="submit"><i class="fal fa-search"></i></button>
     </form>
+
 </div>
 <!-- ==============================
       Sticky Navbar
@@ -245,11 +241,6 @@
                     <ul>
                         <li class="menu-item-has-children">
                             <a href="{{route('home')}}">Home</a>
-                            <ul class="sub-menu">
-                                <li><a href="{{route('home')}}">Home 1</a></li>
-                                <li><a href="index-2.html">Home 2</a></li>
-                                <li><a href="index-3.html">Home 3</a></li>
-                            </ul>
                         </li>
                         <li class="menu-item-has-children">
                             <a href="{{route('about')}}">About</a>
@@ -262,7 +253,7 @@
                             <a href="{{route('shop.sidebar')}}">watch</a>
                         </li>
                         <li>
-                            <a href="shop.html">jewellery</a>
+                            <a href="{{route('shop.index')}}">jewellery</a>
                         </li>
                         <li class="menu-item-has-children mega-menu-wrap">
                             <a href="javascript:void(0)">Pages</a>
@@ -278,7 +269,7 @@
                                 </li>
                                 <li><a href="#">Page List 2</a>
                                     <ul>
-                                        <li><a href="shop.html">jewellery</a></li>
+                                        <li><a href="{{route('shop.index')}}">jewellery</a></li>
                                         <li><a href="{{route('faq')}}">Faq's</a></li>
                                         <li><a href="{{route('blog.index')}}">Blog</a></li>
                                         <li><a href="{{route('blog-list')}}">Blog List</a></li>
@@ -287,7 +278,7 @@
                                 </li>
                                 <li><a href="#">Page List 3</a>
                                     <ul>
-                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="{{route('shop.index')}}">Shop</a></li>
                                         <li><a href="{{route('shop.sidebar')}}">Shop Sidebar</a></li>
                                         <li><a href="shop-details.html">Shop Details</a></li>
                                         <li><a href="">My Cart</a></li>
@@ -379,8 +370,8 @@
             <div class="header-top">
                 <div class="row align-items-end justify-content-between">
                     <div class="col-md-4 d-none d-md-block">
-                        <form action="#" class="header-search">
-                            <input type="text" placeholder="search">
+                        <form id="search-form" class="header-search">
+                            <input type="text" name="query" id="search-input" placeholder="search">
                             <button type="submit" aria-label="search-button"><i class="far fa-search"></i></button>
                         </form>
                     </div>
@@ -431,11 +422,6 @@
                                 <ul>
                                     <li class="menu-item-has-children">
                                         <a href="{{route('home')}}">Home</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="{{route('home')}}">Home 1</a></li>
-                                            <li><a href="index-2.html">Home 2</a></li>
-                                            <li><a href="index-3.html">Home 3</a></li>
-                                        </ul>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="{{route('about')}}">About</a>
@@ -448,7 +434,7 @@
                                         <a href="{{route('shop.sidebar')}}">watch</a>
                                     </li>
                                     <li>
-                                        <a href="shop.html">jewellery</a>
+                                        <a href="{{route('shop.index')}}">jewellery</a>
                                     </li>
                                     <li class="menu-item-has-children mega-menu-wrap">
                                         <a href="javascript:void(0)">Pages</a>
@@ -464,7 +450,7 @@
                                             </li>
                                             <li><a href="#">Page List 2</a>
                                                 <ul>
-                                                    <li><a href="shop.html">jewellery</a></li>
+                                                    <li><a href="{{route('shop.index')}}">jewellery</a></li>
                                                     <li><a href="{{route('faq')}}">Faq's</a></li>
                                                     <li><a href="{{route('blog.index')}}">Blog</a></li>
                                                     <li><a href="{{route('blog-list')}}">Blog List</a></li>
@@ -473,7 +459,7 @@
                                             </li>
                                             <li><a href="#">Page List 3</a>
                                                 <ul>
-                                                    <li><a href="shop.html">Shop</a></li>
+                                                    <li><a href="{{route('shop.index')}}">Shop</a></li>
                                                     <li><a href="{{route('shop.sidebar')}}">Shop Sidebar</a></li>
                                                     <li><a href="shop-details.html">Shop Details</a></li>
                                                     <li><a href="">My Cart</a></li>
@@ -564,7 +550,7 @@
                         <div class="footer-widget">
                             <h3 class="footer-title">Shopping</h3>
                             <div class="footer-menu2">
-                                <a href="shop.html">Gift card</a>
+                                <a href="{{route('shop.index')}}">Gift card</a>
                                 <a href="{{route('about')}}">terms & conditions</a>
                                 <a href="{{route('about')}}">privacy policy</a>
                                 <a href="{{route('about')}}">delivery</a>

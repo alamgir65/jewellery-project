@@ -4,6 +4,16 @@
     checkout-page
 @endsection
 
+@section('categories')
+    @foreach($categories as $category)
+        <a href="{{route('shop.product-by-category',['id'=>$category->id])}}">
+            <li class="menu-item">
+                <span class="icon"><img src="{{asset($category->image)}}" width="40" alt="logo"></span> {{$category->name}}
+            </li>
+        </a>
+    @endforeach
+@endsection
+
 @section('body')
 
     <!--==============================

@@ -93,16 +93,16 @@
                                             </button>
                                         </a>
                                     </div>
-                                    <div class="product-img">
+                                    <a href="{{route('shop.details',['id'=>$product->id])}}" class="product-img">
                                         <img class="img" src="{{asset($product->image)}}" alt="product">
-                                    </div>
+                                    </a>
                                     <div class="product-content">
                                         <h3 class="product-title">
-                                            <a href="">{{$product->name}}</a>
+                                            <a href="{{route('shop.details',['id'=>$product->id])}}">{{$product->name}}</a>
                                         </h3>
                                         <span class="product-price">
                   <span class="product-price__number">{{$product->selling_price}}</span>
-                    <a class="product-cart" href="">add to cart</a>
+                    <a class="product-cart" href="{{route('shop.details',['id'=>$product->id])}}">add to cart</a>
                     </span>
                                         <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
                                             <span></span>

@@ -18,6 +18,7 @@ use App\Http\Controllers\CourierController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\AdminCustomerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SearchController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
@@ -28,6 +29,8 @@ Route::get('/shop',[ShopController::class,'index'])->name('shop.index');
 Route::get('/shop/detail/{id}',[ShopController::class,'detail'])->name('shop.details');
 Route::get('/shop/sidebar',[ShopController::class,'productSideBar'])->name('shop.sidebar');
 Route::get('/shop-product/by-category/{id}',[ShopController::class,'productByCategory'])->name('shop.product-by-category');
+
+Route::get('/search',[SearchController::class,'index'])->name('search');
 
 Route::get('/cart/index',[CartController::class,'index'])->name('cart.index');
 Route::post('/cart/add/{id}',[CartController::class,'addToCart'])->name('add-to-cart');
